@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://mp_ud.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Tiles/Ashen/volcano_pack_alt_39.png" type="Texture" id=2]
+
+[node name="mp_ud" type="Node2D"]
+position = Vector2( 512, 544 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="up_down" type="KinematicBody2D" parent="."]
+
+[node name="platform_single" type="Sprite" parent="up_down"]
+position = Vector2( 0, 32 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="up_down"]
+position = Vector2( -64, -32 )
+polygon = PoolVector2Array( 0, 0, 128, 0, 128, 64, 0, 64 )
+
+[node name="Tween" type="Tween" parent="."]
+repeat = true
+playback_process_mode = 0
+playback/repeat = true

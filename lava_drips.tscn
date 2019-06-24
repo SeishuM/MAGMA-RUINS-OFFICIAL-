@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Sprites/Tiles/RigidBody2D.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/LavaDROP/fire4.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 52.7365
+
+[node name="LavaDrops" type="KinematicBody2D"]
+position = Vector2( 332.868, -43.6832 )
+collision_layer = 64
+collision_mask = 3
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 59.0139, 74.5659 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2( 52.9254, -3.79942 )
+scale = Vector2( 0.1, 0.1 )
+amount = 1
+lifetime = 11.17
+speed_scale = 8.51
+texture = ExtResource( 2 )
+emission_shape = 2
+emission_rect_extents = Vector2( 1000, 10 )
+spread = 66.72
