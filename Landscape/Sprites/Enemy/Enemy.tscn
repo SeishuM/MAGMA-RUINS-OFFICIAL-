@@ -1,0 +1,118 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://SootMonster.gd" type="Script" id=1]
+[ext_resource path="res://soot.png" type="Texture" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": false,
+"name": "default",
+"speed": 12.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 16.0
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 55, 32 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 64.9294, 10 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 6.00671, 4.28688 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 5.23463, 2.80431 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Enemy" type="Node" parent="."]
+
+[node name="SootMonster" type="KinematicBody2D" parent="Enemy"]
+position = Vector2( 48, 48 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Enemy/SootMonster"]
+frames = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/SootMonster"]
+shape = SubResource( 2 )
+
+[node name="RayCast2D" type="RayCast2D" parent="Enemy/SootMonster"]
+position = Vector2( 20, 3 )
+enabled = true
+cast_to = Vector2( 0, 20 )
+
+[node name="Platform" type="Node" parent="."]
+
+[node name="Floor" type="StaticBody2D" parent="Platform"]
+editor/display_folded = true
+position = Vector2( 80.4401, 274.68 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Platform/Floor"]
+position = Vector2( -0.5, -1 )
+scale = Vector2( 1.70313, 1 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/Floor"]
+position = Vector2( 3, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D" type="Area2D" parent="Platform"]
+position = Vector2( 188.154, 324.814 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/Area2D"]
+shape = SubResource( 4 )
+
+[node name="Node3" type="Node" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node3"]
+position = Vector2( 248.574, 276.674 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Node3/StaticBody2D"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node3/StaticBody2D"]
+shape = SubResource( 5 )
+
+[node name="Node4" type="Node" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node4"]
+position = Vector2( 135.557, 229.533 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node4/StaticBody2D"]
+position = Vector2( -2.14572, 0.194305 )
+shape = SubResource( 6 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 23.3267, 241.189 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource( 7 )
