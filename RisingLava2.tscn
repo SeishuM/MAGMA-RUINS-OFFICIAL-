@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://RisingLava2.gd" type="Script" id=1]
+[ext_resource path="res://LavaReset.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/Lava/rising_lava_lev2_00.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Lava/rising_lava_lev2_01.png" type="Texture" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 415.875, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 3872, 32 )
+
+[node name="RisingLava2" type="Node2D"]
+position = Vector2( 448, 64 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Lava" type="KinematicBody2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="Lava"]
+position = Vector2( -160, -192 )
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Lava/Area2D"]
+position = Vector2( 3584, 277.125 )
+scale = Vector2( 8.76613, 3.51882 )
+frames = SubResource( 1 )
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lava/Area2D"]
+position = Vector2( 3616, 128 )
+scale = Vector2( 9.61828, 1.99104 )
+shape = SubResource( 2 )
+one_way_collision = true
+one_way_collision_margin = 128.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lava"]
+position = Vector2( 3424, 64 )
+shape = SubResource( 3 )
+one_way_collision = true
+one_way_collision_margin = 87.0
+
+[node name="Tween" type="Tween" parent="."]
+[connection signal="body_entered" from="Lava/Area2D" to="Lava/Area2D" method="_on_Area2D_body_entered"]

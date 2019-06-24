@@ -1,0 +1,93 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://player_body.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Player/jump/jumpup00.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Player/jump/jumpup01.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Player/idle/idle00.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Player/idle/idle01.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Player/idle/idle02.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Player/idle/idle03.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Player/idle/idle04.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Player/idle/idle05.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Player/idle/idle06.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Player/idle/idle07.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Player/land/land1.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Player/land/land2.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Player/jump/jumpdown00.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Player/jump/jumpdown01.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Player/run/run00.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Player/run/run01.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Player/run/run02.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Player/run/run03.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Player/run/run04.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Player/run/run05.png" type="Texture" id=21]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "up",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "idle",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "dead",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "down",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "run",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 16.556, 28 )
+
+[node name="player_body" type="KinematicBody2D"]
+position = Vector2( 70.2561, 695.652 )
+z_index = 1
+script = ExtResource( 1 )
+
+[node name="player_sprite" type="AnimatedSprite" parent="."]
+position = Vector2( -12.646, -5.14491 )
+scale = Vector2( 1, 1.00831 )
+frames = SubResource( 1 )
+animation = "idle"
+frame = 2
+playing = true
+
+[node name="player_shape" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( -8.3333, -1.66663 )
+shape = SubResource( 2 )
+
+[node name="player_camera" type="Camera2D" parent="."]
+position = Vector2( -8.3333, -1.66663 )
+rotating = true
+current = true
+smoothing_enabled = true
+
+[node name="camera_start_timer" type="Timer" parent="player_camera"]
+wait_time = 2.0
+autostart = true
+
+[node name="player_position" type="Position2D" parent="."]
+position = Vector2( 31.3333, 2.33337 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

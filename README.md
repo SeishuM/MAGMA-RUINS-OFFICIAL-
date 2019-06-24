@@ -1,1 +1,1 @@
-# MAGMA-RUINS-OFFICIAL-
+# MagmaRuins

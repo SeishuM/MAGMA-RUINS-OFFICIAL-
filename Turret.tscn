@@ -1,0 +1,97 @@
+[gd_scene load_steps=31 format=2]
+
+[ext_resource path="res://Turret.gd" type="Script" id=1]
+[ext_resource path="res://Bullet.tscn" type="PackedScene" id=2]
+[ext_resource path="res://DragonFire.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Dragons/PNG/Animation/Dragon2/Flight_000.png" type="Texture" id=4]
+[ext_resource path="res://Dragons/PNG/Animation/Dragon2/Flight_001.png" type="Texture" id=5]
+[ext_resource path="res://Dragons/PNG/Animation/Dragon2/Flight_003.png" type="Texture" id=6]
+[ext_resource path="res://Dragons/PNG/Animation/Dragon2/Flight_002.png" type="Texture" id=7]
+[ext_resource path="res://Dragons/PNG/Animation/Dragon2/Flight_005.png" type="Texture" id=8]
+[ext_resource path="res://Dragons/PNG/Animation/Dragon2/Flight_004.png" type="Texture" id=9]
+[ext_resource path="res://Dragons/PNG/Animation/Dragon2/Flight_006.png" type="Texture" id=10]
+[ext_resource path="res://Dragons/PNG/Animation/Dragon2/Dead_000.png" type="Texture" id=11]
+[ext_resource path="res://Dragons/PNG/Animation/Dragon2/Dead_001.png" type="Texture" id=12]
+[ext_resource path="res://Dragons/PNG/Animation/Dragon2/Dead_002.png" type="Texture" id=13]
+[ext_resource path="res://Dragons/PNG/Animation/Dragon2/Dead_003.png" type="Texture" id=14]
+[ext_resource path="res://Dragons/PNG/Animation/Dragon2/Dead_004.png" type="Texture" id=15]
+[ext_resource path="res://Dragons/PNG/Animation/Dragon2/Dead_005.png" type="Texture" id=16]
+[ext_resource path="res://Dragons/PNG/Animation/Dragon2/Dead_006.png" type="Texture" id=17]
+[ext_resource path="res://Dragons/PNG/Animation/Dragon2/Dead_007.png" type="Texture" id=18]
+[ext_resource path="res://Dragons/PNG/Animation/Dragon2/Attack_000.png" type="Texture" id=19]
+[ext_resource path="res://Dragons/PNG/Animation/Dragon2/Attack_001.png" type="Texture" id=20]
+[ext_resource path="res://Dragons/PNG/Animation/Dragon2/Attack_002.png" type="Texture" id=21]
+[ext_resource path="res://Dragons/PNG/Animation/Dragon2/Attack_003.png" type="Texture" id=22]
+[ext_resource path="res://Dragons/PNG/Animation/Dragon2/Attack_004.png" type="Texture" id=23]
+[ext_resource path="res://Dragons/PNG/Animation/Dragon2/Attack_005.png" type="Texture" id=24]
+[ext_resource path="res://Dragons/PNG/Animation/Dragon2/Attack_006.png" type="Texture" id=25]
+[ext_resource path="res://Dragons/PNG/Animation/Dragon2/Attack_009.png" type="Texture" id=26]
+[ext_resource path="res://Visibility.gd" type="Script" id=27]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "idle",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "dead",
+"speed": 3.5
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ) ],
+"loop": true,
+"name": "attack",
+"speed": 11.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 33.2943, 13.671 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 91.6957, 142.301 )
+
+[node name="Turret" type="KinematicBody2D"]
+position = Vector2( 392.857, 356.976 )
+collision_layer = 4
+collision_mask = 3
+script = ExtResource( 1 )
+detect_radius = 750
+fire_rate = 3.0
+Bullet = ExtResource( 2 )
+DragonFire = ExtResource( 3 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( 45.278, -17.2701 )
+scale = Vector2( 0.399999, 0.634135 )
+frames = SubResource( 1 )
+animation = "idle"
+frame = 5
+playing = true
+flip_h = true
+
+[node name="TurretShape1" type="CollisionShape2D" parent="."]
+position = Vector2( -11.9633, 11.2356 )
+shape = SubResource( 2 )
+
+[node name="Visibility" type="Area2D" parent="."]
+position = Vector2( -6.19897, 0.826416 )
+collision_layer = 8
+collision_mask = 2
+script = ExtResource( 27 )
+
+[node name="TurretShape2" type="CollisionShape2D" parent="Visibility"]
+position = Vector2( -27.2752, -53.3106 )
+shape = SubResource( 3 )
+
+[node name="ShootTimer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+[connection signal="body_entered" from="Visibility" to="." method="_on_Visibility_body_entered"]
+[connection signal="body_exited" from="Visibility" to="." method="_on_Visibility_body_exited"]
+[connection signal="timeout" from="ShootTimer" to="." method="_on_ShootTimer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
