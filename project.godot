@@ -19,6 +19,10 @@ config/name="MAGMA RUINS [OFFICIAL GITHUB]"
 run/main_scene="res://MainMenu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+GLOBAL="*res://GLOBAL.gd"
+
 [display]
 
 window/size/width=1000

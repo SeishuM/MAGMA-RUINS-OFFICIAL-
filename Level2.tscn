@@ -33,7 +33,7 @@ script = ExtResource( 1 )
 
 [node name="BlackBackground" type="Sprite" parent="."]
 show_behind_parent = true
-position = Vector2( 1485.36, 248.239 )
+position = Vector2( 1596.36, 257.239 )
 scale = Vector2( 2.1253, 1.33736 )
 texture = ExtResource( 2 )
 
@@ -88,7 +88,6 @@ __meta__ = {
 position = Vector2( 12.376, 3.44094 )
 scale = Vector2( 0.688, 0.258 )
 frames = SubResource( 1 )
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lava2"]
