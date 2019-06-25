@@ -23,6 +23,7 @@ size_flags_horizontal = 3
 
 [node name="LifeBar" parent="Bars" instance=ExtResource( 2 )]
 margin_right = 1326.0
+margin_bottom = 40.0
 rect_scale = Vector2( 1, 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
