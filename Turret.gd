@@ -101,11 +101,11 @@ func aim():
 			
 func shoot(pos):
 	var c = DragonFire.instance()
-	var b = Bullet.instance()
+	#var b = Bullet.instance()
 	var a = (pos - global_position).angle()
 	
 	c.start(global_position, a + rand_range(-0.10, 0.10))
-	b.start(global_position, a + rand_range(-0.05, 0.05))
+	#b.start(global_position, a + rand_range(-0.05, 0.05))
 	get_parent().add_child(c)
 	can_shoot = false
 	$ShootTimer.start()
