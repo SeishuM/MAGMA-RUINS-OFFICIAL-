@@ -30,10 +30,9 @@ func dead():
 	is_dead = true
 	velocity = Vector2(0,0)
 	$Sprite.play("dead")
-	#$TurretShape2.set_disabled(true)
+
 	$TurretShape1.call_deferred("set_disabled", true)
-	#$CollisionShape2D.disabled = true
-	#$Visibility/TurretShape2.set_disabled(true)
+
 	
 	$Timer.start()
 	
@@ -84,28 +83,20 @@ func _physics_process(delta):
 func aim():
 	hit_pos = []
 	var space_state = get_world_2d().direct_space_state
-	#var target_extents = target.get_node('CollisionShape2D').shape.extents - Vector2(5, 5)
-	#var nw = target.position - target_extents
-	#var se = target.position + target_extents
-	#var ne = target.position + Vector2(target_extents.x, -target_extents.y)
-	#var sw = target.position + Vector2(-target_extents.x, target_extents.y)
-	#for pos in [target.position, nw, ne, se, sw]:
+
 	var result = space_state.intersect_ray(position, target.position, [self], collision_mask)
 	if result:
 		hit_pos.append(result.position)
 		if result.collider.name == "Player":
 			$Sprite.self_modulate.r 
-			#rotation = (target.position + position).angle()
 			if can_shoot:
 				shoot(target.position)
 			
 func shoot(pos):
 	var c = DragonFire.instance()
-	#var b = Bullet.instance()
 	var a = (pos - global_position).angle()
 	
 	c.start(global_position, a + rand_range(-0.10, 0.10))
-	#b.start(global_position, a + rand_range(-0.05, 0.05))
 	get_parent().add_child(c)
 	can_shoot = false
 	$ShootTimer.start()
@@ -126,7 +117,7 @@ func _on_Visibility_body_entered(body):
 func _on_Visibility_body_exited(body):
 	if body == target:
 		target = null
-		#$Sprite.self_modulate.r = 0.2
+
 
 func _on_ShootTimer_timeout():
 	can_shoot = true

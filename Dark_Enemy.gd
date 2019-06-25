@@ -54,7 +54,7 @@ func _physics_process(delta):
 		
 	if get_slide_count() > 0:
 		for i in range(get_slide_count()):
-			if "player_body" in get_slide_collision(i).collider.name:
+			if "Player" in get_slide_collision(i).collider.name:
 				get_slide_collision(i).collider.dead()
 
 
@@ -81,7 +81,7 @@ func aim():
 	var result = space_state.intersect_ray(position, target.position, [self], collision_mask)
 	if result:
 		hit_pos.append(result.position)
-		if result.collider.name == "player_body":
+		if result.collider.name == "Player":
 			$Dark_Enemy_Sprite.self_modulate.r 
 			#rotation = (target.position + position).angle()
 			#if can_shoot:
