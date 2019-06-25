@@ -97,6 +97,7 @@ position = Vector2( 1472, -576 )
 target_stage = "res://Level2.tscn"
 
 [node name="lvl1_moving_platform" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 352, -192 )
 script = ExtResource( 8 )
 __meta__ = {
@@ -121,11 +122,13 @@ playback_process_mode = 0
 playback/repeat = true
 
 [node name="lvl_1_moving_lava" type="Node2D" parent="."]
+editor/display_folded = true
 script = ExtResource( 9 )
 
 [node name="lvl_1_moving_lava_body" type="KinematicBody2D" parent="lvl_1_moving_lava"]
 
 [node name="lvl_1_moving_lava_area" type="Area2D" parent="lvl_1_moving_lava/lvl_1_moving_lava_body"]
+editor/display_folded = true
 script = ExtResource( 10 )
 
 [node name="lvl1_moving_lava_area_shape" type="CollisionShape2D" parent="lvl_1_moving_lava/lvl_1_moving_lava_body/lvl_1_moving_lava_area"]
@@ -136,7 +139,7 @@ shape = SubResource( 2 )
 position = Vector2( 832, 736 )
 frames = SubResource( 3 )
 animation = "lava"
-frame = 3
+frame = 4
 playing = true
 
 [node name="lvl1_moving_lava_shape" type="CollisionShape2D" parent="lvl_1_moving_lava/lvl_1_moving_lava_body"]
@@ -146,6 +149,7 @@ shape = SubResource( 4 )
 [node name="lvl_1_moving_lava_tween" type="Tween" parent="lvl_1_moving_lava"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
 
 [node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 19 )]
 visible = false
