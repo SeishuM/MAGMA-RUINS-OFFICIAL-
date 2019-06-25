@@ -21,7 +21,7 @@ tile_data = PoolIntArray( -983020, 8, 0, -983019, 8, 0, -983018, 8, 0, -983017, 
 
 [node name="BlackBackground" type="Sprite" parent="."]
 show_behind_parent = true
-position = Vector2( -2186.74, 672.291 )
+position = Vector2( -3327.49, 1165.04 )
 scale = Vector2( 8.94136, 6.46424 )
 texture = ExtResource( 3 )
 
