@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 
+
 export (int) var detect_radius
 export (float) var fire_rate
 export (PackedScene) var Bullet

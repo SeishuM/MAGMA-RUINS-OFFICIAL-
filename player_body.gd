@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 const UP = Vector2(0, -1)
-const GRAVITY = 15
+const GRAVITY = 12
 const ACCELERATION = 50
 const MAX_SPEED = 450
 const JUMP_HEIGHT = -380
@@ -20,19 +20,19 @@ var health = max_health
 enum STATES {ALIVE, DEAD}
 var state = STATES.ALIVE
 
-func take_damage(count):
-	if state == STATES.DEAD:
-		return
+###func take_damage(count):
+##	#if state == STATES.DEAD:
+#		return
+#
+#	health -= count
+#	if health <= 0:
+#		health = 0
+#		state = STATES.DEAD
+#		emit_signal("died")
+#
+#	$AnimationPlayer.play("take_hit")
 
-	health -= count
-	if health <= 0:
-		health = 0
-		state = STATES.DEAD
-		emit_signal("died")
-
-	$AnimationPlayer.play("take_hit")
-
-	emit_signal("health_changed", health)
+	#emit_signal("health_changed", health)
 
 func _on_AnimationPlayer_animation_finished( name ):
 	if state != STATES.DEAD:
@@ -99,11 +99,15 @@ func _physics_process(delta):
 
 	
 func dead():
-	is_dead = true
-	motion = Vector2(0,0)
-	$player_sprite.play("dead")
+	max_health = max_health - 25
+	emit_signal("health_changed", max_health)
+	
+	if max_health <= 0:
+		is_dead = true
+		motion = Vector2(0,0)
+		$player_sprite.play("dead")
 	#$CollisionShape2D.disabled = true
-	$Timer.start()
+		$Timer.start()
 
 func _on_Timer_timeout():
-	get_tree().change_scene("Level2.tscn")
+	get_tree().change_scene("Level 1.tscn")

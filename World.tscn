@@ -172,7 +172,7 @@ position = Vector2( 0, -1.52588e-005 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="platforms/lvl5_p2/lvl5_p2_body"]
 frames = SubResource( 2 )
-frame = 20
+frame = 18
 playing = true
 centered = false
 
@@ -195,7 +195,7 @@ position = Vector2( 2965.58, 780.48 )
 position = Vector2( 2851.81, 802.07 )
 
 [node name="Player" parent="." instance=ExtResource( 22 )]
-position = Vector2( -10.646, 1022.8 )
+position = Vector2( 3.70398, 1056.28 )
 collision_layer = 2
 
 [node name="Lava2" type="Node2D" parent="."]
@@ -208,7 +208,7 @@ position = Vector2( -831.471, 3193.9 )
 position = Vector2( 411.21, 1260.81 )
 
 [node name="Turret" parent="." instance=ExtResource( 25 )]
-position = Vector2( -1014.34, 993.512 )
+position = Vector2( 674.169, 945.679 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -711.329, 2065.17 )
