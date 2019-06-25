@@ -1,5 +1,6 @@
 extends Area2D
 
+export var strength = 6
 var speed = 1000
 var velocity = Vector2()
 
