@@ -172,7 +172,7 @@ position = Vector2( 0, -1.52588e-005 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="platforms/lvl5_p2/lvl5_p2_body"]
 frames = SubResource( 2 )
-frame = 29
+frame = 15
 playing = true
 centered = false
 
@@ -209,7 +209,8 @@ position = Vector2( 411.21, 1260.81 )
 
 [node name="Turret" parent="." instance=ExtResource( 25 )]
 position = Vector2( -1014.34, 993.512 )
-detect_radius = 600
+detect_radius = 800
+fire_rate = 3.0
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -711.329, 2065.17 )
