@@ -11,7 +11,7 @@ func _ready():
 	bar.max_value = player_max_health
 	update_health(player_max_health)
 
-func _on_Player_health_changed(player_health):
+ func _on_Player_health_changed(player_health):
 	update_health(player_health)
 	
 func update_health(new_value):

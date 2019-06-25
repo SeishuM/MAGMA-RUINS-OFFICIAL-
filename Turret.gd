@@ -5,18 +5,23 @@ export (int) var detect_radius
 export (float) var fire_rate
 export (PackedScene) var Bullet
 export(PackedScene) var DragonFire
-
+onready var Player = get_parent().get_node("Player")
 var vis_color = Color(0, 0, 0, 0)
 var laser_color = Color(1.0, .329, .298)
 
 var velocity = Vector2()
 const SPEED = 100
 const FLOOR = Vector2(0, -1)
-var direction = 1
+var direction = 0
 var target
 var hit_pos
 var can_shoot = true
 var is_dead = false
+
+var react_time = 600
+var next_direction = 0
+var next_dir_time = 0
+var target_player_dist = 200
 
 func is_dead():
 	return is_dead
@@ -33,12 +38,17 @@ func dead():
 	$Timer.start()
 	
 func _ready():
+	set_process(true)
 	randomize()
 	#$Sprite.self_modulate = Color(0, 0, 0)
 	var shape = CircleShape2D.new()
 	shape.radius = detect_radius
 	$Visibility/TurretShape2.shape = shape
 	$ShootTimer.wait_time = fire_rate
+func set_dir(target_direction):
+	if next_direction != target_direction:
+		next_direction = target_direction
+		next_dir_time = OS.get_ticks_msec() + react_time
 
 func _physics_process(delta):
 	if get_slide_count() > 0:
@@ -47,7 +57,18 @@ func _physics_process(delta):
 				get_slide_collision(i).collider.dead()
 	if is_dead == false:
 		update()
-		velocity.x = SPEED * direction
+		#velocity.x = SPEED * direction
+		if Player.position.x < position.x - target_player_dist:
+			set_dir(-1)
+		elif Player.position.x > position.x + target_player_dist:
+			set_dir(1)
+		else:
+			set_dir(0)
+			
+		if OS.get_ticks_msec() > next_dir_time:
+			direction = next_direction
+			
+		velocity.x = direction * 200
 		if direction == 1:
 			$Sprite.flip_h = false
 		else:
