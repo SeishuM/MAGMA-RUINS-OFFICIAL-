@@ -28,4 +28,6 @@ func _on_Fireball_body_entered(body):
 		body.dead()
 	if "Turret" in body.name:
 		body.dead()
+	if "Dark_Enemy" in body.name:
+		body.dead()
 	queue_free()
