@@ -1,10 +1,10 @@
 extends KinematicBody2D
 
 const UP = Vector2(0, -1)
-const GRAVITY = 8
+const GRAVITY = 15
 const ACCELERATION = 50
 const MAX_SPEED = 450
-const JUMP_HEIGHT = -360
+const JUMP_HEIGHT = -380
 
 const FIREBALL = preload("res://Fireball.tscn")
 
