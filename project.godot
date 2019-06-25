@@ -33,5 +33,3 @@ window/size/height=680
 2d_physics/layer_5="bullets"
 2d_physics/layer_6="dragonfires"
 2d_physics/layer_7="lavadrops"
-2d_physics/layer_8="dark_enemy"
-2d_physics/layer_9="dark_enemy_visibility"
