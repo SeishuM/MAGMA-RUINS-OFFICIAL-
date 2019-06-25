@@ -28,3 +28,6 @@ func _on_Player_died():
     var start_color = Color(1.0, 1.0, 1.0, 1.0)
     var end_color = Color(1.0, 1.0, 1.0, 0.0)
     tween.interpolate_property(self, "modulate", start_color, end_color, 1.0, Tween.TRANS_LINEAR, Tween.EASE_IN)
+
+func _on_player_body_health_changed():
+	pass # Replace with function body.

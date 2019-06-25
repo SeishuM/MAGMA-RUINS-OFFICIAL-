@@ -8,8 +8,40 @@ const JUMP_HEIGHT = -360
 
 const FIREBALL = preload("res://Fireball.tscn")
 
+signal health_changed
+signal died
+
 var motion = Vector2()
 var is_dead = false
+
+export var max_health = 100
+var health = max_health
+
+enum STATES {ALIVE, DEAD}
+var state = STATES.ALIVE
+
+func take_damage(count):
+	if state == STATES.DEAD:
+		return
+
+	health -= count
+	if health <= 0:
+		health = 0
+		state = STATES.DEAD
+		emit_signal("died")
+
+	$AnimationPlayer.play("take_hit")
+
+	emit_signal("health_changed", health)
+
+func _on_AnimationPlayer_animation_finished( name ):
+	if state != STATES.DEAD:
+		return
+	if name != "take_hit":
+		return
+
+	$AnimationPlayer.play("die")
+
 
 func _physics_process(delta):
 	motion.y += GRAVITY
