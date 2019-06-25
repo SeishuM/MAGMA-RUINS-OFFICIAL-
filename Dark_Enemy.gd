@@ -2,6 +2,7 @@ extends KinematicBody2D
 export (int) var detect_radius
 export (float) var fire_rate
 export(PackedScene) var DragonFire
+export (int) var hp = 3
 
 const GRAVITY = 10
 const SPEED = 100
@@ -22,11 +23,13 @@ func is_dead():
 	return is_dead
 
 func dead():
-	is_dead = true
-	velocity = Vector2(0,0)
-	$Dark_Enemy_Sprite.play("dead")
-	$CollisionShape2D.call_deferred("set_disabled", true)
-	$Timer.start()
+	hp = hp - 1
+	if hp <= 0:
+		is_dead = true
+		velocity = Vector2(0,0)
+		$Dark_Enemy_Sprite.play("dead")
+		$CollisionShape2D.call_deferred("set_disabled", true)
+		$Timer.start()
 	
 func _ready():
 	randomize()
