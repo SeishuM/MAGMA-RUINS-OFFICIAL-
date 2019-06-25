@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://shooting_spike.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Effects/spike.png" type="Texture" id=2]
+
+[node name="shooting_spike_area" type="Area2D"]
+position = Vector2( 0.35791, 0.263519 )
+scale = Vector2( 0.75, 0.75 )
+script = ExtResource( 1 )
+
+[node name="shooting_spike_sprite" type="Sprite" parent="."]
+position = Vector2( 0, -0.351359 )
+texture = ExtResource( 2 )
+flip_h = true
+
+[node name="shooting_spike_shape" type="CollisionPolygon2D" parent="."]
+position = Vector2( -8.47722, -16.3514 )
+polygon = PoolVector2Array( 24.0812, 15.3412, 0.298523, 3.57502, -3.70698, 3.57502, -7.2118, 10.3343, -6.96146, 21.5998, -3.45664, 27.6081, 0.548866, 27.6081 )
+
+[node name="shooting_spike_notifier" type="VisibilityNotifier2D" parent="."]
+position = Vector2( -0.477214, -0.351359 )
+scale = Vector2( 1.53783, 1.25055 )
+[connection signal="body_entered" from="." to="." method="_on_Fireball_body_entered"]
+[connection signal="body_entered" from="." to="." method="_on_shooting_spike_area_body_entered"]
+[connection signal="screen_exited" from="shooting_spike_notifier" to="." method="_on_VisibilityNotifier2D_screen_exited"]
+[connection signal="screen_exited" from="shooting_spike_notifier" to="." method="_on_shooting_spike_notifier_screen_exited"]
