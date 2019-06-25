@@ -122,6 +122,7 @@ playback_process_mode = 0
 playback/repeat = true
 
 [node name="lvl_1_moving_lava" type="Node2D" parent="."]
+editor/display_folded = true
 script = ExtResource( 9 )
 
 [node name="lvl_1_moving_lava_body" type="KinematicBody2D" parent="lvl_1_moving_lava"]
@@ -138,7 +139,7 @@ shape = SubResource( 2 )
 position = Vector2( 832, 736 )
 frames = SubResource( 3 )
 animation = "lava"
-frame = 2
+frame = 4
 playing = true
 
 [node name="lvl1_moving_lava_shape" type="CollisionShape2D" parent="lvl_1_moving_lava/lvl_1_moving_lava_body"]

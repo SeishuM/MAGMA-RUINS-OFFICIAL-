@@ -58,7 +58,7 @@ position = Vector2( -626.233, -1504.34 )
 target_stage = "res://World.tscn"
 
 [node name="Player" parent="." instance=ExtResource( 6 )]
-position = Vector2( 4307.59, 448.203 )
+position = Vector2( 4310.05, 483.807 )
 
 [node name="mp_ud" parent="." instance=ExtResource( 7 )]
 position = Vector2( 3202.07, 601.45 )
@@ -88,7 +88,6 @@ __meta__ = {
 position = Vector2( 12.376, 3.44094 )
 scale = Vector2( 0.688, 0.258 )
 frames = SubResource( 1 )
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lava2"]
