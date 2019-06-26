@@ -1,7 +1,9 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://scripts/GUI.gd" type="Script" id=1]
-[ext_resource path="res://scenes/LifeBar.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Characters/Player/scripts/GUI.gd" type="Script" id=1]
+[ext_resource path="res://Characters/Player/Scenes/LifeBar.tscn" type="PackedScene" id=2]
+
+
 
 [node name="GUI" type="MarginContainer"]
 margin_right = 1366.0
