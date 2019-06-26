@@ -13,14 +13,14 @@
 [ext_resource path="res://Characters/Player/idle/idle07.png" type="Texture" id=11]
 [ext_resource path="res://Characters/Player/land/land1.png" type="Texture" id=12]
 [ext_resource path="res://Characters/Player/land/land2.png" type="Texture" id=13]
-[ext_resource path="res://Characters/Player/jump/jumpdown00.png" type="Texture" id=14]
-[ext_resource path="res://Characters/Player/jump/jumpdown01.png" type="Texture" id=15]
-[ext_resource path="res://Characters/Player/run/run00.png" type="Texture" id=16]
-[ext_resource path="res://Characters/Player/run/run01.png" type="Texture" id=17]
-[ext_resource path="res://Characters/Player/run/run02.png" type="Texture" id=18]
-[ext_resource path="res://Characters/Player/run/run03.png" type="Texture" id=19]
-[ext_resource path="res://Characters/Player/run/run04.png" type="Texture" id=20]
-[ext_resource path="res://Characters/Player/run/run05.png" type="Texture" id=21]
+[ext_resource path="res://Characters/Player/run/run00.png" type="Texture" id=14]
+[ext_resource path="res://Characters/Player/run/run01.png" type="Texture" id=15]
+[ext_resource path="res://Characters/Player/run/run02.png" type="Texture" id=16]
+[ext_resource path="res://Characters/Player/run/run03.png" type="Texture" id=17]
+[ext_resource path="res://Characters/Player/run/run04.png" type="Texture" id=18]
+[ext_resource path="res://Characters/Player/run/run05.png" type="Texture" id=19]
+[ext_resource path="res://Characters/Player/jump/jumpdown00.png" type="Texture" id=20]
+[ext_resource path="res://Characters/Player/jump/jumpdown01.png" type="Texture" id=21]
 [ext_resource path="res://Characters/Player/Health/Scenes/GUI.tscn" type="PackedScene" id=22]
 [ext_resource path="res://PauseScreen.tscn" type="PackedScene" id=23]
 
@@ -41,15 +41,15 @@ animations = [ {
 "name": "dead",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 14 ), ExtResource( 15 ) ],
-"loop": true,
-"name": "down",
-"speed": 8.0
-}, {
-"frames": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
 "loop": true,
 "name": "run",
 "speed": 10.0
+}, {
+"frames": [ ExtResource( 20 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "down",
+"speed": 8.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]

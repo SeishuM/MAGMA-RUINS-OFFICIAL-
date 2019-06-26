@@ -3,9 +3,6 @@
 [ext_resource path="res://Characters/Player/scripts/GUI.gd" type="Script" id=1]
 [ext_resource path="res://Characters/Player/Health/Scenes/LifeBar.tscn" type="PackedScene" id=2]
 
-
-
-
 [node name="GUI" type="MarginContainer"]
 margin_right = 1366.0
 margin_bottom = 137.0
@@ -26,8 +23,6 @@ size_flags_horizontal = 3
 
 [node name="LifeBar" parent="Bars" instance=ExtResource( 2 )]
 margin_right = 1326.0
-margin_bottom = 40.0
-rect_scale = Vector2( 1, 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 499.89, 339.969 )

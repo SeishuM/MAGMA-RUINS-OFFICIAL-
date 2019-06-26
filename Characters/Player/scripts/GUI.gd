@@ -1,6 +1,6 @@
 extends MarginContainer
 
-onready var number_label = $Bars/LifeBar/Count/Background/Number
+onready var number_label = $Bars/LifeBar/Count/Number
 onready var bar = $Bars/LifeBar/TextureProgress
 onready var tween = $Tween
 

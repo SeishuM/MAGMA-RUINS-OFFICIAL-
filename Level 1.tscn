@@ -133,6 +133,7 @@ shape = SubResource( 2 )
 position = Vector2( 832, 736 )
 frames = SubResource( 3 )
 animation = "lava"
+frame = 3
 playing = true
 
 [node name="lvl1_moving_lava_shape" type="CollisionShape2D" parent="lvl_1_moving_lava/lvl_1_moving_lava_body"]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/label_HP_bg.png-cb6fc4218802e01a42137119b1dd6402.stex"
+path="res://.import/energy_bar_fill.png-1ec29b39c8f401030e232f6bf926730b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Player/Health/label_HP_bg.png"
-dest_files=[ "res://.import/label_HP_bg.png-cb6fc4218802e01a42137119b1dd6402.stex" ]
+source_file="res://Characters/Player/Health/GUI/energy_bar_fill.png"
+dest_files=[ "res://.import/energy_bar_fill.png-1ec29b39c8f401030e232f6bf926730b.stex" ]
 
 [params]
 
