@@ -6,7 +6,7 @@ const ACCELERATION = 50
 const MAX_SPEED = 450
 const JUMP_HEIGHT = -380
 
-const FIREBALL = preload("res://Fireball.tscn")
+const FIREBALL = preload("res://Projectiles/Fireball.tscn")
 
 signal health_changed
 signal died

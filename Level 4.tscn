@@ -3,18 +3,25 @@
 [ext_resource path="res://Scene/Background/BlackBackground.png" type="Texture" id=1]
 [ext_resource path="res://Scene/Ground/indoor_castle/tile_castle.png" type="Texture" id=2]
 [ext_resource path="res://Scene/Ground/indoor_castle/indoor_castle_tiles.tres" type="TileSet" id=3]
-[ext_resource path="res://lvl2_to_5_area.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scene/Level_Doors/lvl2_to_5_area.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Characters/Player/Player.tscn" type="PackedScene" id=5]
-[ext_resource path="res://mp_ud.tscn" type="PackedScene" id=6]
-[ext_resource path="res://mp_lr.tscn" type="PackedScene" id=7]
-[ext_resource path="res://lava_drips.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Rising_Lava.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Lava2.gd" type="Script" id=10]
+[ext_resource path="res://Scene/Ground/Moving_Platforms/mp_ud.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scene/Ground/Moving_Platforms/mp_lr.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scene/Effects/lava_drips.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scene/Lava/Rising_Lava.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scene/Lava/Lava2.gd" type="Script" id=10]
 [ext_resource path="res://Scene/Lava/rising_lava_lev2_01.png" type="Texture" id=11]
 [ext_resource path="res://Scene/Lava/rising_lava_lev2_00.png" type="Texture" id=12]
 [ext_resource path="res://Characters/Magma/magma_monster.tscn" type="PackedScene" id=13]
-[ext_resource path="res://lava fall.png" type="Texture" id=14]
-[ext_resource path="res://fallingrock.png" type="Texture" id=15]
+[ext_resource path="res://Scene/Effects/lava fall.png" type="Texture" id=14]
+[ext_resource path="res://Scene/Effects/fallingrock.png" type="Texture" id=15]
+
+
+
+
+
+
+
 
 
 
