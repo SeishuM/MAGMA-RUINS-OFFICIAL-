@@ -5,20 +5,20 @@
 [ext_resource path="res://magma_monster.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Sprites/Tiles/indoor_castle/indoor_castle_tiles.tres" type="TileSet" id=4]
 [ext_resource path="res://Sprites/Tiles/tile_castle.png" type="Texture" id=5]
-[ext_resource path="res://Player.tscn" type="PackedScene" id=6]
-[ext_resource path="res://lvl1_to_2_area.tscn" type="PackedScene" id=7]
-[ext_resource path="res://lvl1_moving_platform.gd" type="Script" id=8]
-[ext_resource path="res://lvl_1_moving_lava.gd" type="Script" id=9]
-[ext_resource path="res://lvl_1_moving_lava_area.gd" type="Script" id=10]
-[ext_resource path="res://Sprites/Lava/animated_lava/lava00.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/Lava/animated_lava/lava01.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/Lava/animated_lava/lava02.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/Lava/animated_lava/lava03.png" type="Texture" id=14]
-[ext_resource path="res://Sprites/Lava/animated_lava/lava04.png" type="Texture" id=15]
-[ext_resource path="res://Sprites/Lava/animated_lava/lava05.png" type="Texture" id=16]
-[ext_resource path="res://Sprites/Lava/animated_lava/lava06.png" type="Texture" id=17]
-[ext_resource path="res://Sprites/Lava/animated_lava/lava07.png" type="Texture" id=18]
-[ext_resource path="res://PauseScreen.tscn" type="PackedScene" id=19]
+[ext_resource path="res://lvl1_to_2_area.tscn" type="PackedScene" id=6]
+[ext_resource path="res://lvl1_moving_platform.gd" type="Script" id=7]
+[ext_resource path="res://lvl_1_moving_lava.gd" type="Script" id=8]
+[ext_resource path="res://lvl_1_moving_lava_area.gd" type="Script" id=9]
+[ext_resource path="res://Sprites/Lava/animated_lava/lava00.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Lava/animated_lava/lava01.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Lava/animated_lava/lava02.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Lava/animated_lava/lava03.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Lava/animated_lava/lava04.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Lava/animated_lava/lava05.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Lava/animated_lava/lava06.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Lava/animated_lava/lava07.png" type="Texture" id=17]
+[ext_resource path="res://PauseScreen.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Characters/Player/Player.tscn" type="PackedScene" id=19]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 80, 16 )
@@ -28,7 +28,7 @@ extents = Vector2( 1600, 16 )
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
 "loop": true,
 "name": "lava",
 "speed": 12.0
@@ -88,17 +88,14 @@ centered = false
 region_enabled = true
 region_rect = Rect2( 352, 352, 64, 96 )
 
-[node name="Player" parent="." instance=ExtResource( 6 )]
-position = Vector2( 51.197, 162.333 )
-
-[node name="lvl1_to_2_area" parent="." instance=ExtResource( 7 )]
+[node name="lvl1_to_2_area" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1472, -576 )
 target_stage = "res://Level2.tscn"
 
 [node name="lvl1_moving_platform" type="Node2D" parent="."]
 editor/display_folded = true
 position = Vector2( 352, -192 )
-script = ExtResource( 8 )
+script = ExtResource( 7 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -122,13 +119,13 @@ playback/repeat = true
 
 [node name="lvl_1_moving_lava" type="Node2D" parent="."]
 editor/display_folded = true
-script = ExtResource( 9 )
+script = ExtResource( 8 )
 
 [node name="lvl_1_moving_lava_body" type="KinematicBody2D" parent="lvl_1_moving_lava"]
 
 [node name="lvl_1_moving_lava_area" type="Area2D" parent="lvl_1_moving_lava/lvl_1_moving_lava_body"]
 editor/display_folded = true
-script = ExtResource( 10 )
+script = ExtResource( 9 )
 
 [node name="lvl1_moving_lava_area_shape" type="CollisionShape2D" parent="lvl_1_moving_lava/lvl_1_moving_lava_body/lvl_1_moving_lava_area"]
 position = Vector2( 832, 480 )
@@ -138,7 +135,7 @@ shape = SubResource( 2 )
 position = Vector2( 832, 736 )
 frames = SubResource( 3 )
 animation = "lava"
-frame = 6
+frame = 1
 playing = true
 
 [node name="lvl1_moving_lava_shape" type="CollisionShape2D" parent="lvl_1_moving_lava/lvl_1_moving_lava_body"]
@@ -150,10 +147,13 @@ shape = SubResource( 4 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 editor/display_folded = true
 
-[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 19 )]
+[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 18 )]
 visible = false
 margin_left = -0.645935
 margin_top = -176.354
 margin_right = -0.645935
 margin_bottom = -176.354
+
+[node name="Player" parent="." instance=ExtResource( 19 )]
+position = Vector2( 100.95, 162.814 )
 [connection signal="body_entered" from="lvl_1_moving_lava/lvl_1_moving_lava_body/lvl_1_moving_lava_area" to="lvl_1_moving_lava/lvl_1_moving_lava_body/lvl_1_moving_lava_area" method="_on_lvl_1_moving_lava_area_body_entered"]
