@@ -67,7 +67,7 @@ editor/display_folded = true
 position = Vector2( 1349.99, 857.795 )
 
 [node name="player_sprite" parent="Player" index="0"]
-frame = 0
+frame = 4
 
 [node name="magma_monster_body" parent="." instance=ExtResource( 5 )]
 position = Vector2( 112.267, 172.878 )
@@ -85,7 +85,7 @@ position = Vector2( 3869.84, 843.77 )
 position = Vector2( 1199.7, 1049.88 )
 scale = Vector2( 0.07, 0.521397 )
 frames = SubResource( 1 )
-frame = 2
+frame = 4
 playing = true
 
 [node name="Area2D" type="Area2D" parent="AnimatedSprite1"]
@@ -99,7 +99,7 @@ shape = SubResource( 2 )
 position = Vector2( 2143.92, 1084.93 )
 scale = Vector2( 0.16, 0.632093 )
 frames = SubResource( 1 )
-frame = 2
+frame = 4
 playing = true
 
 [node name="Area2D" type="Area2D" parent="AnimatedSprite2"]
@@ -113,7 +113,7 @@ shape = SubResource( 3 )
 position = Vector2( 3184.01, 1084.25 )
 scale = Vector2( 0.09, 0.630218 )
 frames = SubResource( 1 )
-frame = 3
+frame = 5
 playing = true
 
 [node name="Area2D" type="Area2D" parent="AnimatedSprite3"]
@@ -127,7 +127,7 @@ shape = SubResource( 4 )
 position = Vector2( 4399.61, 1087.07 )
 scale = Vector2( 0.129894, 0.631682 )
 frames = SubResource( 1 )
-frame = 3
+frame = 5
 playing = true
 
 [node name="Area2D" type="Area2D" parent="AnimatedSprite4"]
