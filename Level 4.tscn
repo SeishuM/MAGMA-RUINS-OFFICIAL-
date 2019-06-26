@@ -28,9 +28,6 @@ region_rect = Rect2( 349.49, 371.228, 65.1371, 80.1688 )
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( -85.4857, 191.598 )
 
-[node name="player_sprite" parent="Player" index="0"]
-frame = 3
-
 [node name="skeleton_body" parent="." instance=ExtResource( 5 )]
 position = Vector2( 173.516, 195.105 )
 

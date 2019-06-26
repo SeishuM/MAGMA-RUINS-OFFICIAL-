@@ -46,7 +46,7 @@ var state = STATES.ALIVE
 func _physics_process(delta):
 	motion.y += GRAVITY
 	var friction = false
-	
+
 	if is_dead == false:
 		if Input.is_action_pressed("ui_right"):
 			motion.x = min(motion.x + ACCELERATION, MAX_SPEED)
@@ -54,7 +54,7 @@ func _physics_process(delta):
 			$player_sprite.play("run")
 			if sign($player_position.position.x) == -1:
 				$player_position.position.x *= -1
-			
+
 		elif Input.is_action_pressed("ui_left"):
 			motion.x = max(motion.x - ACCELERATION, -MAX_SPEED)
 			$player_sprite.flip_h = true
@@ -91,7 +91,7 @@ func _physics_process(delta):
 				motion.x = lerp(motion.x, 0, 0.05)
 
 		motion = move_and_slide(motion, UP)
-		
+
 		if get_slide_count() > 0:
 			for i in range(get_slide_count()):
 				if "Turret" in get_slide_collision(i).collider.name:
@@ -100,7 +100,7 @@ func _physics_process(delta):
 			for i in range(get_slide_count()):
 				if "skeleton" in get_slide_collision(i).collider.name:
 					dead1()
-	
+
 func dead():
 	max_health = max_health - 20
 	emit_signal("health_changed", max_health)
@@ -114,7 +114,7 @@ func dead():
 func dead1():
 	max_health = max_health - 10
 	emit_signal("health_changed", max_health)
-	
+
 	if max_health <= -9:
 		is_dead = true
 		motion = Vector2(0,0)
@@ -135,4 +135,4 @@ func _on_Timer_timeout():
 	get_tree().change_scene("Level 1.tscn")
 
 #func _on_Timer2_timeout():
-	
+
