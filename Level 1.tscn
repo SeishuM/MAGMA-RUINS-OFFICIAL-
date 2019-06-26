@@ -116,11 +116,13 @@ playback_process_mode = 0
 playback/repeat = true
 
 [node name="lvl_1_moving_lava" type="Node2D" parent="."]
+editor/display_folded = true
 script = ExtResource( 7 )
 
 [node name="lvl_1_moving_lava_body" type="KinematicBody2D" parent="lvl_1_moving_lava"]
 
 [node name="lvl_1_moving_lava_area" type="Area2D" parent="lvl_1_moving_lava/lvl_1_moving_lava_body"]
+editor/display_folded = true
 script = ExtResource( 8 )
 
 [node name="lvl1_moving_lava_area_shape" type="CollisionShape2D" parent="lvl_1_moving_lava/lvl_1_moving_lava_body/lvl_1_moving_lava_area"]
@@ -131,7 +133,7 @@ shape = SubResource( 2 )
 position = Vector2( 832, 736 )
 frames = SubResource( 3 )
 animation = "lava"
-frame = 7
+frame = 4
 playing = true
 
 [node name="lvl1_moving_lava_shape" type="CollisionShape2D" parent="lvl_1_moving_lava/lvl_1_moving_lava_body"]
