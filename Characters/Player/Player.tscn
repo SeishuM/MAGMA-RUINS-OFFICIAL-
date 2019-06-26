@@ -59,13 +59,15 @@ extents = Vector2( 16.556, 28 )
 position = Vector2( 70.2561, 695.652 )
 z_index = 1
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="player_sprite" type="AnimatedSprite" parent="."]
 position = Vector2( -12.646, -5.14491 )
 scale = Vector2( 1, 1.00831 )
 frames = SubResource( 1 )
 animation = "idle"
-frame = 7
 playing = true
 
 [node name="player_shape" type="CollisionShape2D" parent="."]
@@ -84,10 +86,10 @@ wait_time = 2.0
 autostart = true
 
 [node name="GUI" parent="player_camera" instance=ExtResource( 22 )]
-margin_left = -89.3515
-margin_top = -70.1116
-margin_right = 346.648
-margin_bottom = 22.8884
+margin_left = -110.755
+margin_top = -75.1467
+margin_right = 429.245
+margin_bottom = 17.8533
 rect_scale = Vector2( 0.4, 0.4 )
 
 [node name="player_position" type="Position2D" parent="."]
