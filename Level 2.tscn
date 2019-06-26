@@ -1,16 +1,44 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=20 format=2]
 
-[ext_resource path="res://BlackBackground.png" type="Texture" id=1]
-[ext_resource path="res://Sprites/Tiles/indoor_castle/indoor_castle_tiles.tres" type="TileSet" id=2]
-[ext_resource path="res://Sprites/Tiles/tile_castle.png" type="Texture" id=3]
+[ext_resource path="res://Scene/Background/BlackBackground.png" type="Texture" id=1]
+[ext_resource path="res://Scene/Ground/indoor_castle/indoor_castle_tiles.tres" type="TileSet" id=2]
+[ext_resource path="res://Scene/Ground/indoor_castle/tile_castle.png" type="Texture" id=3]
 [ext_resource path="res://Characters/Player/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Characters/Magma/magma_monster.tscn" type="PackedScene" id=5]
-[ext_resource path="res://mp_lr.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scene/Lava/animated_lava/lava00.png" type="Texture" id=6]
+[ext_resource path="res://Scene/Lava/animated_lava/lava01.png" type="Texture" id=7]
+[ext_resource path="res://Scene/Lava/animated_lava/lava02.png" type="Texture" id=8]
+[ext_resource path="res://Scene/Lava/animated_lava/lava03.png" type="Texture" id=9]
+[ext_resource path="res://Scene/Lava/animated_lava/lava04.png" type="Texture" id=10]
+[ext_resource path="res://Scene/Lava/animated_lava/lava05.png" type="Texture" id=11]
+[ext_resource path="res://Scene/Lava/animated_lava/lava06.png" type="Texture" id=12]
+[ext_resource path="res://Scene/Lava/animated_lava/lava07.png" type="Texture" id=13]
+[ext_resource path="res://Area2D.gd" type="Script" id=14]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 1600, 45 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 1600, 45 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 1600, 45 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 1600, 45 )
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 3958.01, 1281.65 )
+position = Vector2( 3958.07, 1281.94 )
 scale = Vector2( 2.03475, 1 )
 texture = ExtResource( 1 )
 
@@ -36,10 +64,10 @@ region_rect = Rect2( 287, 368.243, 67, 83 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 editor/display_folded = true
-position = Vector2( 2479.07, 846.199 )
+position = Vector2( 1349.99, 857.795 )
 
 [node name="player_sprite" parent="Player" index="0"]
-frame = 7
+frame = 0
 
 [node name="magma_monster_body" parent="." instance=ExtResource( 5 )]
 position = Vector2( 112.267, 172.878 )
@@ -53,8 +81,64 @@ position = Vector2( 3701.96, 841.372 )
 [node name="magma_monster_body4" parent="." instance=ExtResource( 5 )]
 position = Vector2( 3869.84, 843.77 )
 
-[node name="mp_lr" parent="." instance=ExtResource( 6 )]
-position = Vector2( 4401.36, 855.762 )
-scale = Vector2( 0.8, 0.4 )
+[node name="AnimatedSprite1" type="AnimatedSprite" parent="."]
+position = Vector2( 1199.7, 1049.88 )
+scale = Vector2( 0.07, 0.521397 )
+frames = SubResource( 1 )
+frame = 2
+playing = true
+
+[node name="Area2D" type="Area2D" parent="AnimatedSprite1"]
+script = ExtResource( 14 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite1/Area2D"]
+position = Vector2( -2.77734, -200.345 )
+shape = SubResource( 2 )
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+position = Vector2( 2143.92, 1084.93 )
+scale = Vector2( 0.16, 0.632093 )
+frames = SubResource( 1 )
+frame = 2
+playing = true
+
+[node name="Area2D" type="Area2D" parent="AnimatedSprite2"]
+script = ExtResource( 14 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2/Area2D"]
+position = Vector2( -2.39453, -201.266 )
+shape = SubResource( 3 )
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
+position = Vector2( 3184.01, 1084.25 )
+scale = Vector2( 0.09, 0.630218 )
+frames = SubResource( 1 )
+frame = 3
+playing = true
+
+[node name="Area2D" type="Area2D" parent="AnimatedSprite3"]
+script = ExtResource( 14 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite3/Area2D"]
+position = Vector2( 0, -200.566 )
+shape = SubResource( 4 )
+
+[node name="AnimatedSprite4" type="AnimatedSprite" parent="."]
+position = Vector2( 4399.61, 1087.07 )
+scale = Vector2( 0.129894, 0.631682 )
+frames = SubResource( 1 )
+frame = 3
+playing = true
+
+[node name="Area2D" type="Area2D" parent="AnimatedSprite4"]
+script = ExtResource( 14 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite4/Area2D"]
+position = Vector2( 0, -205.8 )
+shape = SubResource( 5 )
+[connection signal="body_entered" from="AnimatedSprite1/Area2D" to="AnimatedSprite1/Area2D" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="AnimatedSprite2/Area2D" to="AnimatedSprite2/Area2D" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="AnimatedSprite3/Area2D" to="AnimatedSprite1/Area2D" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="AnimatedSprite4/Area2D" to="AnimatedSprite1/Area2D" method="_on_Area2D_body_entered"]
 
 [editable path="Player"]

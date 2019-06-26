@@ -1,20 +1,12 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scene/Ground/indoor_castle/indoor_castle_tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Characters/Skeleton/skeleton.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scene/Ground/Moving_Platforms/mp_lr.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scene/Ground/Moving_Platforms/mp_ud.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scene/Background/BlackBackground.png" type="Texture" id=5]
-[ext_resource path="res://Projectiles/Fire Particle.png" type="Texture" id=6]
-[ext_resource path="res://Scene/Lava/Rising_Lava.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Characters/Player/Player.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scene/Effects/light.jpg" type="Texture" id=9]
-
-
-
-
-
-
+[ext_resource path="res://Scene/Background/BlackBackground.png" type="Texture" id=3]
+[ext_resource path="res://Projectiles/Fire Particle.png" type="Texture" id=4]
+[ext_resource path="res://Scene/Lava/Rising_Lava.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Characters/Player/Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scene/Effects/light.jpg" type="Texture" id=7]
 
 [node name="Level3" type="Node2D"]
 
@@ -28,49 +20,34 @@ tile_data = PoolIntArray( -2752252, 8, 0, -2752251, 8, 0, -2752250, 8, 0, -27522
 [node name="skeleton_body" parent="TileMap" instance=ExtResource( 2 )]
 position = Vector2( -899.773, 223.455 )
 
-[node name="mp_lr" parent="TileMap" instance=ExtResource( 3 )]
-position = Vector2( 2759.74, -959.565 )
-scale = Vector2( 0.5, 0.5 )
-move_to = Vector2( 4000, 0 )
-speed = 5.0
-
-[node name="mp_ud" parent="TileMap" instance=ExtResource( 4 )]
-position = Vector2( 2493.35, -1049.02 )
-scale = Vector2( 0.5, 0.5 )
-move_to = Vector2( 0, -450 )
-
 [node name="BlackBackground" type="Sprite" parent="."]
 visible = false
 show_behind_parent = true
 position = Vector2( -3462.92, 1339.74 )
 scale = Vector2( 8.94136, 6.46424 )
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="Light2D" type="Light2D" parent="."]
 position = Vector2( -2285.48, 149.526 )
 scale = Vector2( 11.1757, 21.667 )
-texture = ExtResource( 6 )
+texture = ExtResource( 4 )
 texture_scale = 1.5
 energy = 1.5
 
-[node name="Rising_Lava" parent="." instance=ExtResource( 7 )]
+[node name="Rising_Lava" parent="." instance=ExtResource( 5 )]
 position = Vector2( 2826.37, 742.907 )
 
 [node name="Lava" parent="Rising_Lava" index="0"]
-editor/display_folded = true
 move_to = Vector2( 0, -4000 )
 speed = 0.1
 
-[node name="AnimatedSprite" parent="Rising_Lava/Lava/Lava" index="0"]
-frame = 0
-
-[node name="Player" parent="." instance=ExtResource( 8 )]
+[node name="Player" parent="." instance=ExtResource( 6 )]
 position = Vector2( -536.634, 217.493 )
 
 [node name="LightOccluder2D" type="Light2D" parent="Player"]
 position = Vector2( -8.08459, -6.34395 )
 scale = Vector2( 0.34413, 0.146807 )
-texture = ExtResource( 9 )
+texture = ExtResource( 7 )
 texture_scale = 9.81
 energy = 1.5
 range_height = 100.0

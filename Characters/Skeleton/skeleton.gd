@@ -5,7 +5,7 @@ const SPEED = 75
 const FLOOR = Vector2(0, -1)
 
 var velocity = Vector2()
-const SPIKE = preload("res://shooting_spike.tscn")
+const SPIKE = preload("res://Projectiles/shooting_spike.tscn")
 
 var direction = 1
 

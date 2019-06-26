@@ -1,36 +1,22 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scene/Background/BlackBackground.png" type="Texture" id=1]
 [ext_resource path="res://Scene/Ground/indoor_castle/tile_castle.png" type="Texture" id=2]
 [ext_resource path="res://Scene/Ground/indoor_castle/indoor_castle_tiles.tres" type="TileSet" id=3]
 [ext_resource path="res://Scene/Level_Doors/lvl2_to_5_area.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Characters/Player/Player.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scene/Ground/Moving_Platforms/mp_ud.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scene/Ground/Moving_Platforms/mp_lr.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scene/Effects/lava_drips.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scene/Lava/Rising_Lava.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scene/Lava/Lava2.gd" type="Script" id=10]
-[ext_resource path="res://Scene/Lava/rising_lava_lev2_01.png" type="Texture" id=11]
-[ext_resource path="res://Scene/Lava/rising_lava_lev2_00.png" type="Texture" id=12]
-[ext_resource path="res://Characters/Magma/magma_monster.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Scene/Effects/lava fall.png" type="Texture" id=14]
-[ext_resource path="res://Scene/Effects/fallingrock.png" type="Texture" id=15]
-
-
-
-
-
-
-
-
-
-
-
-
+[ext_resource path="res://Scene/Effects/lava_drips.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scene/Lava/Rising_Lava.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scene/Lava/Lava2.gd" type="Script" id=8]
+[ext_resource path="res://Scene/Lava/rising_lava_lev2_01.png" type="Texture" id=9]
+[ext_resource path="res://Scene/Lava/rising_lava_lev2_00.png" type="Texture" id=10]
+[ext_resource path="res://Characters/Magma/magma_monster.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scene/Effects/lava fall.png" type="Texture" id=12]
+[ext_resource path="res://Scene/Effects/fallingrock.png" type="Texture" id=13]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 11 ), ExtResource( 12 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -70,26 +56,16 @@ target_stage = "res://World.tscn"
 [node name="Player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 4310.05, 483.807 )
 
-[node name="mp_ud" parent="." instance=ExtResource( 6 )]
-position = Vector2( 3202.07, 601.45 )
-move_to = Vector2( 0, -590 )
-speed = 1.75
-
-[node name="mp_lr" parent="." instance=ExtResource( 7 )]
-position = Vector2( 3515.13, 506.551 )
-move_to = Vector2( 375, 0 )
-speed = 1.5
-
-[node name="RigidBody2D" parent="." instance=ExtResource( 8 )]
+[node name="RigidBody2D" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1905.4, -120.874 )
 
-[node name="Rising_Lava" parent="." instance=ExtResource( 9 )]
+[node name="Rising_Lava" parent="." instance=ExtResource( 7 )]
 position = Vector2( 2984.85, 1043.32 )
 
 [node name="Lava2" type="Area2D" parent="."]
 editor/display_folded = true
 position = Vector2( 2630.45, 85.5728 )
-script = ExtResource( 10 )
+script = ExtResource( 8 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -109,34 +85,34 @@ shape = SubResource( 2 )
 editor/display_folded = true
 position = Vector2( -13.0142, 19.5212 )
 
-[node name="magma_monster_body" parent="enemies" instance=ExtResource( 13 )]
+[node name="magma_monster_body" parent="enemies" instance=ExtResource( 11 )]
 position = Vector2( 4110.75, 449.395 )
 
-[node name="magma_monster_body2" parent="enemies" instance=ExtResource( 13 )]
+[node name="magma_monster_body2" parent="enemies" instance=ExtResource( 11 )]
 position = Vector2( 2205.41, 7.0426 )
 
-[node name="magma_monster_body3" parent="enemies" instance=ExtResource( 13 )]
+[node name="magma_monster_body3" parent="enemies" instance=ExtResource( 11 )]
 position = Vector2( 1955.39, 3.48621 )
 
-[node name="magma_monster_body4" parent="enemies" instance=ExtResource( 13 )]
+[node name="magma_monster_body4" parent="enemies" instance=ExtResource( 11 )]
 position = Vector2( 1347.55, -5.36585 )
 
-[node name="magma_monster_body5" parent="enemies" instance=ExtResource( 13 )]
+[node name="magma_monster_body5" parent="enemies" instance=ExtResource( 11 )]
 position = Vector2( 1058.38, 6.43689 )
 
-[node name="magma_monster_body6" parent="enemies" instance=ExtResource( 13 )]
+[node name="magma_monster_body6" parent="enemies" instance=ExtResource( 11 )]
 position = Vector2( 727.903, 9.38757 )
 
-[node name="magma_monster_body7" parent="enemies" instance=ExtResource( 13 )]
+[node name="magma_monster_body7" parent="enemies" instance=ExtResource( 11 )]
 position = Vector2( 409.229, -633.863 )
 
-[node name="magma_monster_body8" parent="enemies" instance=ExtResource( 13 )]
+[node name="magma_monster_body8" parent="enemies" instance=ExtResource( 11 )]
 position = Vector2( -154.353, -1486.61 )
 
-[node name="magma_monster_body9" parent="enemies" instance=ExtResource( 13 )]
+[node name="magma_monster_body9" parent="enemies" instance=ExtResource( 11 )]
 position = Vector2( 1136.57, -1480.71 )
 
-[node name="magma_monster_body10" parent="enemies" instance=ExtResource( 13 )]
+[node name="magma_monster_body10" parent="enemies" instance=ExtResource( 11 )]
 position = Vector2( 490.372, -1455.63 )
 
 [node name="Lava Fall" type="CPUParticles2D" parent="."]
@@ -146,12 +122,7 @@ scale = Vector2( 2.45, 7 )
 amount = 3
 explosiveness = 0.31
 randomness = 0.33
-texture = ExtResource( 14 )
-
-[node name="mp_ud2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 2128.98, -609.72 )
-scale = Vector2( 0.8, 0.5 )
-move_to = Vector2( 0, -1650 )
+texture = ExtResource( 12 )
 
 [node name="Particles2D" type="CPUParticles2D" parent="."]
 position = Vector2( 1133.39, -1201.33 )
@@ -159,7 +130,7 @@ scale = Vector2( 0.35, 0.4 )
 amount = 1
 lifetime = 30.4
 speed_scale = 7.0
-texture = ExtResource( 15 )
+texture = ExtResource( 13 )
 emission_shape = 2
 emission_rect_extents = Vector2( 1000, 1 )
 [connection signal="body_entered" from="Lava2" to="Lava2" method="_on_Lava2_body_entered"]
