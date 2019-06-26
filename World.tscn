@@ -27,8 +27,6 @@
 [ext_resource path="res://Turret.tscn" type="PackedScene" id=25]
 [ext_resource path="res://Sprites/Tiles/tile_castle.png" type="Texture" id=26]
 
-
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 48, 16 )
 
@@ -175,7 +173,7 @@ position = Vector2( 0, -1.52588e-005 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="platforms/lvl5_p2/lvl5_p2_body"]
 frames = SubResource( 2 )
-frame = 13
+frame = 11
 playing = true
 centered = false
 
