@@ -1,10 +1,13 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://BlackBackground.png" type="Texture" id=1]
-[ext_resource path="res://Sprites/Tiles/indoor_castle/indoor_castle_tiles.tres" type="TileSet" id=2]
-[ext_resource path="res://Sprites/Tiles/tile_castle.png" type="Texture" id=3]
+[ext_resource path="res://Scene/Ground/indoor_castle/indoor_castle_tiles.tres" type="TileSet" id=2]
+[ext_resource path="res://Scene/Ground/indoor_castle/tile_castle.png" type="Texture" id=3]
 [ext_resource path="res://Characters/Skeleton/skeleton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Characters/Player/Player.tscn" type="PackedScene" id=5]
+
+
+
 
 [node name="Node2D" type="Node2D"]
 
