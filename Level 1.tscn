@@ -51,7 +51,7 @@ position = Vector2( 107.456, 162.333 )
 position = Vector2( 708.931, -660.984 )
 
 [node name="magma_monster_body2" parent="lvl1_enemies" instance=ExtResource( 3 )]
-position = Vector2( 315.271, -665.132 )
+position = Vector2( 15.4445, -44.8014 )
 
 [node name="magma_monster_body3" parent="lvl1_enemies" instance=ExtResource( 3 )]
 position = Vector2( 1082.51, -659.093 )
