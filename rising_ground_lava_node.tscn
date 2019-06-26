@@ -1,9 +1,10 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://rising_ground_lava_node.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Lava/ground_lava_.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/Lava/ground_lava_2.png" type="Texture" id=3]
+[ext_resource path="res://Scene/Lava/ground_lava_.png" type="Texture" id=2]
+[ext_resource path="res://Scene/Lava/ground_lava_2.png" type="Texture" id=3]
 [ext_resource path="res://rising_ground_lava_area.gd" type="Script" id=4]
+
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {

@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=2]
 
-[ext_resource path="res://BlackBackground.png" type="Texture" id=1]
+[ext_resource path="res://Scene/Background/BlackBackground.png" type="Texture" id=1]
 [ext_resource path="res://Characters/Magma/magma_monster.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/Ground/indoor_castle/indoor_castle_tiles.tres" type="TileSet" id=3]
 [ext_resource path="res://Scene/Ground/indoor_castle/tile_castle.png" type="Texture" id=4]
@@ -8,15 +8,17 @@
 [ext_resource path="res://lvl1_moving_platform.gd" type="Script" id=6]
 [ext_resource path="res://lvl_1_moving_lava.gd" type="Script" id=7]
 [ext_resource path="res://lvl_1_moving_lava_area.gd" type="Script" id=8]
-[ext_resource path="res://Sprites/Lava/animated_lava/lava00.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/Lava/animated_lava/lava01.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/Lava/animated_lava/lava02.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/Lava/animated_lava/lava03.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/Lava/animated_lava/lava04.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/Lava/animated_lava/lava05.png" type="Texture" id=14]
-[ext_resource path="res://Sprites/Lava/animated_lava/lava06.png" type="Texture" id=15]
-[ext_resource path="res://Sprites/Lava/animated_lava/lava07.png" type="Texture" id=16]
+[ext_resource path="res://Scene/Lava/animated_lava/lava00.png" type="Texture" id=9]
+[ext_resource path="res://Scene/Lava/animated_lava/lava01.png" type="Texture" id=10]
+[ext_resource path="res://Scene/Lava/animated_lava/lava02.png" type="Texture" id=11]
+[ext_resource path="res://Scene/Lava/animated_lava/lava03.png" type="Texture" id=12]
+[ext_resource path="res://Scene/Lava/animated_lava/lava04.png" type="Texture" id=13]
+[ext_resource path="res://Scene/Lava/animated_lava/lava05.png" type="Texture" id=14]
+[ext_resource path="res://Scene/Lava/animated_lava/lava06.png" type="Texture" id=15]
+[ext_resource path="res://Scene/Lava/animated_lava/lava07.png" type="Texture" id=16]
 [ext_resource path="res://Characters/Player/Player.tscn" type="PackedScene" id=17]
+
+
 
 
 

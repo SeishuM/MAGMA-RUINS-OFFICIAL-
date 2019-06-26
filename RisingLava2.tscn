@@ -2,8 +2,9 @@
 
 [ext_resource path="res://RisingLava2.gd" type="Script" id=1]
 [ext_resource path="res://LavaReset.gd" type="Script" id=2]
-[ext_resource path="res://Sprites/Lava/rising_lava_lev2_00.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/Lava/rising_lava_lev2_01.png" type="Texture" id=4]
+[ext_resource path="res://Scene/Lava/rising_lava_lev2_00.png" type="Texture" id=3]
+[ext_resource path="res://Scene/Lava/rising_lava_lev2_01.png" type="Texture" id=4]
+
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
