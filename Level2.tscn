@@ -74,10 +74,9 @@ speed = 1.5
 position = Vector2( 1905.4, -120.874 )
 
 [node name="Rising_Lava" parent="." instance=ExtResource( 10 )]
-position = Vector2( 2984.85, 1043.32 )
+position = Vector2( 1636.7, 1079.27 )
 
 [node name="Lava2" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 2630.45, 85.5728 )
 script = ExtResource( 11 )
 __meta__ = {

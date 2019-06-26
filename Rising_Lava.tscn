@@ -17,7 +17,7 @@ animations = [ {
 extents = Vector2( 521.607, 14.3395 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 1183.93, 71.6797 )
+extents = Vector2( 1234.22, 71.6797 )
 
 [node name="Rising_Lava" type="Node2D"]
 position = Vector2( 735.062, 254.935 )

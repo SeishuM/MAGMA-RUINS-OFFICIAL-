@@ -20,8 +20,8 @@ func dead():
 		is_dead = true
 		velocity = Vector2(0,0)
 		$skeleton_sprite.play("dead")
-		$skeleton_shape.set_disabled(true)
-		$skeleton_area/skeleton_area_shape.set_disabled(true)
+		#$skeleton_shape.set_disabled(true)
+		$skeleton_shape.call_deferred("set_disabled", true)
 	
 		$skeleton_death_timer.start()
 
@@ -37,6 +37,7 @@ func _physics_process(delta):
 			if sign($skeleton_position.position.x) == 1:
 				$skeleton_position.position.x *= -1
 		$skeleton_sprite.play("walk")
+	
 
 		velocity.y += GRAVITY
 
