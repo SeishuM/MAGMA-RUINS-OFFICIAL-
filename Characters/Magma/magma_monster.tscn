@@ -1,51 +1,51 @@
 [gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Characters/Magma/magma_monster.gd" type="Script" id=1]
-[ext_resource path="res://Characters/Magma/Death/death1.png" type="Texture" id=2]
-[ext_resource path="res://Characters/Magma/Death/death2.png" type="Texture" id=3]
-[ext_resource path="res://Characters/Magma/Walk/walk1.png" type="Texture" id=4]
-[ext_resource path="res://Characters/Magma/Walk/walk2.png" type="Texture" id=5]
-[ext_resource path="res://Characters/Magma/Walk/walk3.png" type="Texture" id=6]
-[ext_resource path="res://Characters/Magma/Walk/walk4.png" type="Texture" id=7]
-[ext_resource path="res://Characters/Magma/Walk/walk5.png" type="Texture" id=8]
-[ext_resource path="res://Characters/Magma/Walk/walk6.png" type="Texture" id=9]
+[ext_resource path="res://Characters/Magma/Walk/walk1.png" type="Texture" id=2]
+[ext_resource path="res://Characters/Magma/Walk/walk2.png" type="Texture" id=3]
+[ext_resource path="res://Characters/Magma/Walk/walk3.png" type="Texture" id=4]
+[ext_resource path="res://Characters/Magma/Walk/walk4.png" type="Texture" id=5]
+[ext_resource path="res://Characters/Magma/Walk/walk5.png" type="Texture" id=6]
+[ext_resource path="res://Characters/Magma/Walk/walk6.png" type="Texture" id=7]
+[ext_resource path="res://Characters/Magma/Death/death1.png" type="Texture" id=8]
+[ext_resource path="res://Characters/Magma/Death/death2.png" type="Texture" id=9]
 [ext_resource path="res://Characters/Magma/magma_monster_area.gd" type="Script" id=10]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "dead",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "walk",
 "speed": 4.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "dead",
+"speed": 10.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 5.72632
-height = 4.90115
+height = 7.73487
 
 [sub_resource type="CircleShape2D" id=3]
-radius = 8.41255
+radius = 13.3792
 
 [node name="magma_monster_body" type="KinematicBody2D"]
 scale = Vector2( 2, 2 )
 script = ExtResource( 1 )
 
 [node name="magma_monster_sprite" type="AnimatedSprite" parent="."]
-position = Vector2( 0, -10 )
-scale = Vector2( 0.25, 0.25 )
+position = Vector2( 0.184029, -0.154618 )
+scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 1 )
-animation = "dead"
+animation = "walk"
 frame = 1
 playing = true
 centered = false
 
 [node name="magma_monster_shape" type="CollisionShape2D" parent="."]
-position = Vector2( 15.6712, 11.2175 )
+position = Vector2( 12.7268, 16.3702 )
 rotation = 1.5708
 shape = SubResource( 2 )
 
@@ -55,11 +55,10 @@ enabled = true
 cast_to = Vector2( 0, 13 )
 
 [node name="magma_monster_area" type="Area2D" parent="."]
-editor/display_folded = true
 script = ExtResource( 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="magma_monster_area"]
-position = Vector2( 15.0143, 10.1259 )
+position = Vector2( 12.4379, 16.6588 )
 shape = SubResource( 3 )
 
 [node name="Timer" type="Timer" parent="."]
