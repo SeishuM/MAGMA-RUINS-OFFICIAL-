@@ -24,7 +24,7 @@
 [ext_resource path="res://Characters/Player/Player.tscn" type="PackedScene" id=22]
 [ext_resource path="res://rising_ground_lava_node.tscn" type="PackedScene" id=23]
 [ext_resource path="res://lava_drips.tscn" type="PackedScene" id=24]
-[ext_resource path="res://Turret.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Characters/Dragon/Turret.tscn" type="PackedScene" id=25]
 [ext_resource path="res://Sprites/Tiles/tile_castle.png" type="Texture" id=26]
 
 [sub_resource type="RectangleShape2D" id=1]

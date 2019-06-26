@@ -1,19 +1,19 @@
 [gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Characters/Magma/magma_monster.gd" type="Script" id=1]
-[ext_resource path="res://Characters/Magma/Walk/walk1.png" type="Texture" id=2]
-[ext_resource path="res://Characters/Magma/Walk/walk2.png" type="Texture" id=3]
-[ext_resource path="res://Characters/Magma/Walk/walk3.png" type="Texture" id=4]
-[ext_resource path="res://Characters/Magma/Walk/walk4.png" type="Texture" id=5]
-[ext_resource path="res://Characters/Magma/Walk/walk5.png" type="Texture" id=6]
-[ext_resource path="res://Characters/Magma/Walk/walk6.png" type="Texture" id=7]
-[ext_resource path="res://Characters/Magma/Death/death1.png" type="Texture" id=8]
-[ext_resource path="res://Characters/Magma/Death/death2.png" type="Texture" id=9]
+[ext_resource path="res://Characters/Magma/Death/death1.png" type="Texture" id=2]
+[ext_resource path="res://Characters/Magma/Death/death2.png" type="Texture" id=3]
+[ext_resource path="res://Characters/Magma/Walk/walk1.png" type="Texture" id=4]
+[ext_resource path="res://Characters/Magma/Walk/walk2.png" type="Texture" id=5]
+[ext_resource path="res://Characters/Magma/Walk/walk3.png" type="Texture" id=6]
+[ext_resource path="res://Characters/Magma/Walk/walk4.png" type="Texture" id=7]
+[ext_resource path="res://Characters/Magma/Walk/walk5.png" type="Texture" id=8]
+[ext_resource path="res://Characters/Magma/Walk/walk6.png" type="Texture" id=9]
 [ext_resource path="res://Characters/Magma/magma_monster_area.gd" type="Script" id=10]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 3 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "dead",
 "speed": 10.0
@@ -40,6 +40,7 @@ position = Vector2( 0, -10 )
 scale = Vector2( 0.25, 0.25 )
 frames = SubResource( 1 )
 animation = "dead"
+frame = 1
 playing = true
 centered = false
 
