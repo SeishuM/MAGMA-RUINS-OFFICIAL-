@@ -7,10 +7,6 @@
 [ext_resource path="res://Characters/Magma/magma_monster.tscn" type="PackedScene" id=5]
 [ext_resource path="res://mp_lr.tscn" type="PackedScene" id=6]
 
-
-
-
-
 [node name="Node2D" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -41,6 +37,9 @@ region_rect = Rect2( 287, 368.243, 67, 83 )
 [node name="Player" parent="." instance=ExtResource( 4 )]
 editor/display_folded = true
 position = Vector2( 2479.07, 846.199 )
+
+[node name="player_sprite" parent="Player" index="0"]
+frame = 7
 
 [node name="magma_monster_body" parent="." instance=ExtResource( 5 )]
 position = Vector2( 112.267, 172.878 )
