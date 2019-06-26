@@ -8,6 +8,21 @@
 [ext_resource path="res://Characters/Player/Player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scene/Effects/light.jpg" type="Texture" id=7]
 
+
+
+
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 441.646, 10 )
+
 [node name="Level3" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -21,7 +36,6 @@ tile_data = PoolIntArray( -2752252, 8, 0, -2752251, 8, 0, -2752250, 8, 0, -27522
 position = Vector2( -899.773, 223.455 )
 
 [node name="BlackBackground" type="Sprite" parent="."]
-visible = false
 show_behind_parent = true
 position = Vector2( -3462.92, 1339.74 )
 scale = Vector2( 8.94136, 6.46424 )
@@ -45,18 +59,10 @@ speed = 0.1
 position = Vector2( -536.634, 217.493 )
 
 [node name="LightOccluder2D" type="Light2D" parent="Player"]
-position = Vector2( -8.08459, -6.34395 )
+position = Vector2( -6.2793, -11.759 )
 scale = Vector2( 0.34413, 0.146807 )
 texture = ExtResource( 7 )
 texture_scale = 9.81
 energy = 1.5
 range_height = 100.0
 shadow_enabled = true
-
-[node name="skeleton_body" parent="." instance=ExtResource( 2 )]
-position = Vector2( 106.96, 194.099 )
-
-[node name="skeleton_body2" parent="." instance=ExtResource( 2 )]
-position = Vector2( -125.728, 204.596 )
-
-[editable path="Rising_Lava"]

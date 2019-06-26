@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/label_EP.png-24d30af5a4795268d2a512dcdd66475e.stex"
+path="res://.import/label_EP.png-10129c16140c3b155c3d3610404180a1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Player/Health/GUI/label_EP.png"
-dest_files=[ "res://.import/label_EP.png-24d30af5a4795268d2a512dcdd66475e.stex" ]
+source_file="res://Characters/Player/Health/label_EP.png"
+dest_files=[ "res://.import/label_EP.png-10129c16140c3b155c3d3610404180a1.stex" ]
 
 [params]
 

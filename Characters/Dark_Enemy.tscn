@@ -7,20 +7,20 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ null, null, null, null, null, null, null, null, null, null, null, null ],
+"frames": [ null, null, null, null, null ],
 "loop": true,
-"name": "dead",
-"speed": 5.0
+"name": "run",
+"speed": 7.0
 }, {
 "frames": [ null, null, null, null, null, null ],
 "loop": true,
 "name": "attack",
 "speed": 7.0
 }, {
-"frames": [ null, null, null, null, null ],
+"frames": [ null, null, null, null, null, null, null, null, null, null, null, null ],
 "loop": true,
-"name": "run",
-"speed": 7.0
+"name": "dead",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -39,7 +39,7 @@ position = Vector2( 0.422884, -9.9663 )
 scale = Vector2( 0.118225, 0.109709 )
 frames = SubResource( 1 )
 animation = "run"
-frame = 4
+frame = 1
 playing = true
 flip_h = true
 

@@ -6,8 +6,8 @@ func _ready():
 
 
 func _on_skeleton_area_body_entered(body):
-	if "Player" in body.name:
+	if get_parent().is_dead() == false:
+		if "Player" in body.name:
 		# remove next line once health is implimented
-		get_tree().reload_current_scene()
-	else:
-		pass
+			get_tree().reload_current_scene()
+
