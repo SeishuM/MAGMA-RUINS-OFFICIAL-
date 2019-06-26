@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Characters/Player/player_body.gd" type="Script" id=1]
 [ext_resource path="res://Characters/Player/jump/jumpup00.png" type="Texture" id=2]
@@ -11,17 +11,18 @@
 [ext_resource path="res://Characters/Player/idle/idle05.png" type="Texture" id=9]
 [ext_resource path="res://Characters/Player/idle/idle06.png" type="Texture" id=10]
 [ext_resource path="res://Characters/Player/idle/idle07.png" type="Texture" id=11]
-[ext_resource path="res://Characters/Player/run/run00.png" type="Texture" id=12]
-[ext_resource path="res://Characters/Player/run/run01.png" type="Texture" id=13]
-[ext_resource path="res://Characters/Player/run/run02.png" type="Texture" id=14]
-[ext_resource path="res://Characters/Player/run/run03.png" type="Texture" id=15]
-[ext_resource path="res://Characters/Player/run/run04.png" type="Texture" id=16]
-[ext_resource path="res://Characters/Player/run/run05.png" type="Texture" id=17]
-[ext_resource path="res://Characters/Player/jump/jumpdown00.png" type="Texture" id=18]
-[ext_resource path="res://Characters/Player/jump/jumpdown01.png" type="Texture" id=19]
-[ext_resource path="res://Characters/Player/land/land1.png" type="Texture" id=20]
-[ext_resource path="res://Characters/Player/land/land2.png" type="Texture" id=21]
-[ext_resource path="res://Characters/Player/Scenes/GUI.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Characters/Player/land/land1.png" type="Texture" id=12]
+[ext_resource path="res://Characters/Player/land/land2.png" type="Texture" id=13]
+[ext_resource path="res://Characters/Player/run/run00.png" type="Texture" id=14]
+[ext_resource path="res://Characters/Player/run/run01.png" type="Texture" id=15]
+[ext_resource path="res://Characters/Player/run/run02.png" type="Texture" id=16]
+[ext_resource path="res://Characters/Player/run/run03.png" type="Texture" id=17]
+[ext_resource path="res://Characters/Player/run/run04.png" type="Texture" id=18]
+[ext_resource path="res://Characters/Player/run/run05.png" type="Texture" id=19]
+[ext_resource path="res://Characters/Player/jump/jumpdown00.png" type="Texture" id=20]
+[ext_resource path="res://Characters/Player/jump/jumpdown01.png" type="Texture" id=21]
+[ext_resource path="res://Characters/Player/Health/Scenes/GUI.tscn" type="PackedScene" id=22]
+[ext_resource path="res://PauseScreen.tscn" type="PackedScene" id=23]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -58,16 +59,13 @@ extents = Vector2( 16.556, 28 )
 position = Vector2( 70.2561, 695.652 )
 z_index = 1
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="player_sprite" type="AnimatedSprite" parent="."]
 position = Vector2( -12.646, -5.14491 )
 scale = Vector2( 1, 1.00831 )
 frames = SubResource( 1 )
 animation = "idle"
-frame = 1
+frame = 7
 playing = true
 
 [node name="player_shape" type="CollisionShape2D" parent="."]
@@ -86,10 +84,10 @@ wait_time = 2.0
 autostart = true
 
 [node name="GUI" parent="player_camera" instance=ExtResource( 22 )]
-margin_left = -110.755
-margin_top = -75.1467
-margin_right = 429.245
-margin_bottom = 17.8533
+margin_left = -89.3515
+margin_top = -70.1116
+margin_right = 346.648
+margin_bottom = 22.8884
 rect_scale = Vector2( 0.4, 0.4 )
 
 [node name="player_position" type="Position2D" parent="."]
@@ -101,6 +99,13 @@ __meta__ = {
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
 one_shot = true
+
+[node name="PauseScreen" parent="." instance=ExtResource( 23 )]
+visible = false
+margin_left = 0.451141
+margin_top = -238.653
+margin_right = 0.451141
+margin_bottom = -238.653
 [connection signal="died" from="." to="player_camera/GUI" method="_on_Player_died"]
 [connection signal="health_changed" from="." to="player_camera/GUI" method="_on_Player_health_changed"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
