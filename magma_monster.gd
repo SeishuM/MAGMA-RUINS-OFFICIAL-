@@ -18,7 +18,7 @@ func dead():
 	$magma_monster_sprite.play("dead")
 	$magma_monster_shape.set_disabled(true)
 	#$CollisionShape2D.disabled = true
-	$magma_monster_area/magma_monster_area_shape.set_disabled(true)
+	#$magma_monster_area/magma_monster_area_shape.set_disabled(true)
 	
 	$Timer.start()
 
