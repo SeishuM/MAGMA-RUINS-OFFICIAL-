@@ -1,26 +1,26 @@
 [gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Characters/Player/player_body.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Player/jump/jumpup00.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/Player/jump/jumpup01.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/Player/idle/idle00.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/Player/idle/idle01.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/Player/idle/idle02.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/Player/idle/idle03.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/Player/idle/idle04.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/Player/idle/idle05.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/Player/idle/idle06.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/Player/idle/idle07.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/Player/run/run00.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/Player/run/run01.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/Player/run/run02.png" type="Texture" id=14]
-[ext_resource path="res://Sprites/Player/run/run03.png" type="Texture" id=15]
-[ext_resource path="res://Sprites/Player/run/run04.png" type="Texture" id=16]
-[ext_resource path="res://Sprites/Player/run/run05.png" type="Texture" id=17]
-[ext_resource path="res://Sprites/Player/jump/jumpdown00.png" type="Texture" id=18]
-[ext_resource path="res://Sprites/Player/jump/jumpdown01.png" type="Texture" id=19]
-[ext_resource path="res://Sprites/Player/land/land1.png" type="Texture" id=20]
-[ext_resource path="res://Sprites/Player/land/land2.png" type="Texture" id=21]
+[ext_resource path="res://Characters/Player/jump/jumpup00.png" type="Texture" id=2]
+[ext_resource path="res://Characters/Player/jump/jumpup01.png" type="Texture" id=3]
+[ext_resource path="res://Characters/Player/idle/idle00.png" type="Texture" id=4]
+[ext_resource path="res://Characters/Player/idle/idle01.png" type="Texture" id=5]
+[ext_resource path="res://Characters/Player/idle/idle02.png" type="Texture" id=6]
+[ext_resource path="res://Characters/Player/idle/idle03.png" type="Texture" id=7]
+[ext_resource path="res://Characters/Player/idle/idle04.png" type="Texture" id=8]
+[ext_resource path="res://Characters/Player/idle/idle05.png" type="Texture" id=9]
+[ext_resource path="res://Characters/Player/idle/idle06.png" type="Texture" id=10]
+[ext_resource path="res://Characters/Player/idle/idle07.png" type="Texture" id=11]
+[ext_resource path="res://Characters/Player/run/run00.png" type="Texture" id=12]
+[ext_resource path="res://Characters/Player/run/run01.png" type="Texture" id=13]
+[ext_resource path="res://Characters/Player/run/run02.png" type="Texture" id=14]
+[ext_resource path="res://Characters/Player/run/run03.png" type="Texture" id=15]
+[ext_resource path="res://Characters/Player/run/run04.png" type="Texture" id=16]
+[ext_resource path="res://Characters/Player/run/run05.png" type="Texture" id=17]
+[ext_resource path="res://Characters/Player/jump/jumpdown00.png" type="Texture" id=18]
+[ext_resource path="res://Characters/Player/jump/jumpdown01.png" type="Texture" id=19]
+[ext_resource path="res://Characters/Player/land/land1.png" type="Texture" id=20]
+[ext_resource path="res://Characters/Player/land/land2.png" type="Texture" id=21]
 [ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=22]
 
 [sub_resource type="SpriteFrames" id=1]
@@ -64,7 +64,7 @@ position = Vector2( -12.646, -5.14491 )
 scale = Vector2( 1, 1.00831 )
 frames = SubResource( 1 )
 animation = "idle"
-frame = 5
+frame = 1
 playing = true
 
 [node name="player_shape" type="CollisionShape2D" parent="."]

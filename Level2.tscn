@@ -13,9 +13,10 @@
 [ext_resource path="res://Lava2.gd" type="Script" id=11]
 [ext_resource path="res://Sprites/Lava/rising_lava_lev2_01.png" type="Texture" id=12]
 [ext_resource path="res://Sprites/Lava/rising_lava_lev2_00.png" type="Texture" id=13]
-[ext_resource path="res://magma_monster.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Characters/Magma/magma_monster.tscn" type="PackedScene" id=14]
 [ext_resource path="res://lava fall.png" type="Texture" id=15]
 [ext_resource path="res://fallingrock.png" type="Texture" id=16]
+
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {

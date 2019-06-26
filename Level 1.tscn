@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Level 1.gd" type="Script" id=1]
 [ext_resource path="res://BlackBackground.png" type="Texture" id=2]
-[ext_resource path="res://magma_monster.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Characters/Magma/magma_monster.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Sprites/Tiles/indoor_castle/indoor_castle_tiles.tres" type="TileSet" id=4]
 [ext_resource path="res://Sprites/Tiles/tile_castle.png" type="Texture" id=5]
 [ext_resource path="res://lvl1_to_2_area.tscn" type="PackedScene" id=6]
