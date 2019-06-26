@@ -143,10 +143,10 @@ __meta__ = {
 
 [node name="lvl5_p1_body" type="KinematicBody2D" parent="platforms/lvl5_p1"]
 editor/display_folded = true
-position = Vector2( 0, -1.52588e-005 )
+position = Vector2( 0, -1.52588e-05 )
 
 [node name="platform" type="Sprite" parent="platforms/lvl5_p1/lvl5_p1_body"]
-position = Vector2( 0, -1.52588e-005 )
+position = Vector2( 0, -1.52588e-05 )
 texture = ExtResource( 6 )
 centered = false
 
@@ -169,11 +169,11 @@ __meta__ = {
 
 [node name="lvl5_p2_body" type="KinematicBody2D" parent="platforms/lvl5_p2"]
 editor/display_folded = true
-position = Vector2( 0, -1.52588e-005 )
+position = Vector2( 0, -1.52588e-05 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="platforms/lvl5_p2/lvl5_p2_body"]
 frames = SubResource( 2 )
-frame = 29
+frame = 13
 playing = true
 centered = false
 

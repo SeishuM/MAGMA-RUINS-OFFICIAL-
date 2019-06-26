@@ -6,7 +6,6 @@
 [ext_resource path="res://Characters/Skeleton/skeleton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Characters/Player/Player.tscn" type="PackedScene" id=5]
 
-
 [node name="Node2D" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -30,9 +29,7 @@ region_rect = Rect2( 349.49, 371.228, 65.1371, 80.1688 )
 position = Vector2( 173.516, 195.105 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
+editor/display_folded = true
 position = Vector2( -118.327, 190.857 )
-
-[node name="player_sprite" parent="Player" index="0"]
-frame = 3
 
 [editable path="Player"]
