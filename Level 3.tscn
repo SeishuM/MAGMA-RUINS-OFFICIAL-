@@ -1,18 +1,28 @@
 [gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Level3.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Tiles/indoor_castle/indoor_castle_tiles.tres" type="TileSet" id=2]
+[ext_resource path="res://Scene/Ground/indoor_castle/indoor_castle_tiles.tres" type="TileSet" id=2]
 [ext_resource path="res://Characters/Skeleton/skeleton.tscn" type="PackedScene" id=3]
-[ext_resource path="res://mp_lr.tscn" type="PackedScene" id=4]
-[ext_resource path="res://mp_ud.tscn" type="PackedScene" id=5]
-[ext_resource path="res://BlackBackground.png" type="Texture" id=6]
-[ext_resource path="res://Fire Particle.png" type="Texture" id=7]
-[ext_resource path="res://Rising_Lava.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scene/Ground/Moving_Platforms/mp_lr.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scene/Ground/Moving_Platforms/mp_rl.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scene/Background/BlackBackground.png" type="Texture" id=6]
+[ext_resource path="res://Projectiles/Fire Particle.png" type="Texture" id=7]
+[ext_resource path="res://Scene/Lava/Rising_Lava.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Characters/Player/Player.tscn" type="PackedScene" id=9]
-[ext_resource path="res://light.jpg" type="Texture" id=10]
+[ext_resource path="res://Scene/Effects/light.jpg" type="Texture" id=10]
 [ext_resource path="res://Lava1.gd" type="Script" id=11]
-[ext_resource path="res://Sprites/Lava/rising_lava_lev2_00.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/Lava/rising_lava_lev2_01.png" type="Texture" id=13]
+[ext_resource path="res://Scene/Lava/rising_lava_lev2_00.png" type="Texture" id=12]
+[ext_resource path="res://Scene/Lava/rising_lava_lev2_01.png" type="Texture" id=13]
+
+
+
+
+
+
+
+
+
+
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
