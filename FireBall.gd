@@ -26,10 +26,10 @@ func _on_VisibilityNotifier2D_screen_exited():
 func _on_Fireball_body_entered(body):
 	if "magma_monster" in body.name:
 		body.dead()
-	if "Turret" in body.name:
+	elif "Turret" in body.name:
 		body.dead()
-	if "Dark_Enemy" in body.name:
+	elif "Dark_Enemy" in body.name:
 		body.dead()
-	if "skeleton" in body.name:
+	elif "skeleton_body" in body.name:
 		body.dead()
 	queue_free()

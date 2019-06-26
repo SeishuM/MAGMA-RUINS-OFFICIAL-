@@ -32,6 +32,6 @@ position = Vector2( 173.516, 195.105 )
 position = Vector2( -118.327, 190.857 )
 
 [node name="player_sprite" parent="Player" index="0"]
-frame = 0
+frame = 3
 
 [editable path="Player"]

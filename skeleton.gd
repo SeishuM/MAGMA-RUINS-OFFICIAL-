@@ -1,5 +1,5 @@
 extends KinematicBody2D
-export var health = 5
+export (int) var health = 5
 const GRAVITY = 10
 const SPEED = 75
 const FLOOR = Vector2(0, -1)
@@ -23,7 +23,7 @@ func dead():
 		$skeleton_shape.set_disabled(true)
 		$skeleton_area/skeleton_area_shape.set_disabled(true)
 	
-	$skeleton_death_timer.start()
+		$skeleton_death_timer.start()
 
 func _physics_process(delta):
 	if is_dead == false:
