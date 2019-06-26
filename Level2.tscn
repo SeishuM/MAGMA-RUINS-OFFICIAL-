@@ -5,7 +5,7 @@
 [ext_resource path="res://Sprites/Tiles/tile_castle.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Tiles/indoor_castle/indoor_castle_tiles.tres" type="TileSet" id=4]
 [ext_resource path="res://lvl2_to_5_area.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Characters/Player/Player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://mp_ud.tscn" type="PackedScene" id=7]
 [ext_resource path="res://mp_lr.tscn" type="PackedScene" id=8]
 [ext_resource path="res://lava_drips.tscn" type="PackedScene" id=9]
@@ -16,6 +16,7 @@
 [ext_resource path="res://Characters/Magma/magma_monster.tscn" type="PackedScene" id=14]
 [ext_resource path="res://lava fall.png" type="Texture" id=15]
 [ext_resource path="res://fallingrock.png" type="Texture" id=16]
+
 
 
 [sub_resource type="SpriteFrames" id=1]
