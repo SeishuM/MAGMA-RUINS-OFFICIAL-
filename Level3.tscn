@@ -6,11 +6,11 @@
 [ext_resource path="res://mp_ud.tscn" type="PackedScene" id=4]
 [ext_resource path="res://BlackBackground.png" type="Texture" id=5]
 [ext_resource path="res://Fire Particle.png" type="Texture" id=6]
-[ext_resource path="res://Characters/Player/Player.tscn" type="PackedScene" id=7]
-[ext_resource path="res://light.jpg" type="Texture" id=8]
-[ext_resource path="res://Dark_Enemy.tscn" type="PackedScene" id=9]
-[ext_resource path="res://DragonFire.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Rising_Lava.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Dark_Enemy.tscn" type="PackedScene" id=7]
+[ext_resource path="res://DragonFire.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Rising_Lava.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Characters/Player/Player.tscn" type="PackedScene" id=10]
+[ext_resource path="res://light.jpg" type="Texture" id=11]
 
 [node name="Level3" type="Node2D"]
 script = ExtResource( 1 )
@@ -47,33 +47,34 @@ texture = ExtResource( 6 )
 texture_scale = 1.5
 energy = 1.5
 
-[node name="Player" parent="." instance=ExtResource( 7 )]
-position = Vector2( -1656.3, 220.205 )
-
-[node name="LightOccluder2D" type="Light2D" parent="Player"]
-position = Vector2( -11.0654, -7.02185 )
-scale = Vector2( 0.34413, 0.146807 )
-texture = ExtResource( 8 )
-texture_scale = 9.81
-energy = 1.5
-range_height = 100.0
-shadow_enabled = true
-
-[node name="Dark_Enemy" parent="." instance=ExtResource( 9 )]
+[node name="Dark_Enemy" parent="." instance=ExtResource( 7 )]
 position = Vector2( -1400.72, 229.821 )
 collision_layer = 128
 detect_radius = 500
 fire_rate = 1.0
-DragonFire = ExtResource( 10 )
+DragonFire = ExtResource( 8 )
 
-[node name="Rising_Lava" parent="." instance=ExtResource( 11 )]
+[node name="Rising_Lava" parent="." instance=ExtResource( 9 )]
 position = Vector2( 2826.37, 742.907 )
 
 [node name="Lava" parent="Rising_Lava" index="0"]
+editor/display_folded = true
 move_to = Vector2( 0, -4000 )
 speed = 0.1
 
 [node name="AnimatedSprite" parent="Rising_Lava/Lava/Lava" index="0"]
 frame = 0
+
+[node name="Player" parent="." instance=ExtResource( 10 )]
+position = Vector2( -1659.28, 219.527 )
+
+[node name="LightOccluder2D" type="Light2D" parent="Player"]
+position = Vector2( -8.08459, -6.34395 )
+scale = Vector2( 0.34413, 0.146807 )
+texture = ExtResource( 11 )
+texture_scale = 9.81
+energy = 1.5
+range_height = 100.0
+shadow_enabled = true
 
 [editable path="Rising_Lava"]

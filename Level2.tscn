@@ -17,8 +17,6 @@
 [ext_resource path="res://lava fall.png" type="Texture" id=15]
 [ext_resource path="res://fallingrock.png" type="Texture" id=16]
 
-
-
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 12 ), ExtResource( 13 ) ],
