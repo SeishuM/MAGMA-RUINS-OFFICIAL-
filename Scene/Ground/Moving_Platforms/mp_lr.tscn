@@ -15,6 +15,11 @@ __meta__ = {
 position = Vector2( 0, 32 )
 polygon = PoolVector2Array( -64, -64, -64, 0, 64, 0, 64, -64 )
 
+[node name="TileMap" type="TileMap" parent="left_right"]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+tile_data = PoolIntArray( -65538, 0, 0, -65537, 1, 0, -131072, 1, 0, -131071, 2, 0, -2, 9, 0, -1, 10, 0, -65536, 10, 0, -65535, 11, 0, 65534, 4, 0, 65535, 5, 0, 0, 5, 0, 1, 6, 0 )
+
 [node name="Tween" type="Tween" parent="."]
 repeat = true
 playback_process_mode = 0
