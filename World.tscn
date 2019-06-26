@@ -173,7 +173,7 @@ position = Vector2( 0, -1.52588e-005 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="platforms/lvl5_p2/lvl5_p2_body"]
 frames = SubResource( 2 )
-frame = 23
+frame = 13
 playing = true
 centered = false
 

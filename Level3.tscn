@@ -48,10 +48,10 @@ texture_scale = 1.5
 energy = 1.5
 
 [node name="Player" parent="." instance=ExtResource( 7 )]
-position = Vector2( -1659.98, 176.006 )
+position = Vector2( -1656.3, 220.205 )
 
 [node name="LightOccluder2D" type="Light2D" parent="Player"]
-position = Vector2( -1.85742, 15.0774 )
+position = Vector2( -11.0654, -7.02185 )
 scale = Vector2( 0.34413, 0.146807 )
 texture = ExtResource( 8 )
 texture_scale = 9.81
@@ -72,8 +72,5 @@ position = Vector2( 2826.37, 742.907 )
 [node name="Lava" parent="Rising_Lava" index="0"]
 move_to = Vector2( 0, -4000 )
 speed = 0.1
-
-[node name="AnimatedSprite" parent="Rising_Lava/Lava/Lava" index="0"]
-frame = 0
 
 [editable path="Rising_Lava"]
