@@ -32,4 +32,7 @@ position = Vector2( 173.516, 195.105 )
 editor/display_folded = true
 position = Vector2( -118.327, 190.857 )
 
+[node name="player_sprite" parent="Player" index="0"]
+frame = 0
+
 [editable path="Player"]
