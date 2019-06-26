@@ -1,8 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scene/Ground/Moving_Platforms/mp_ud.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Tiles/Ashen/volcano_pack_alt_39.png" type="Texture" id=2]
-
+[ext_resource path="res://Scene/Ground/indoor_castle/indoor_castle_tiles.tres" type="TileSet" id=2]
 
 [node name="mp_ud" type="Node2D"]
 position = Vector2( 512, 544 )
@@ -13,9 +12,11 @@ __meta__ = {
 
 [node name="up_down" type="KinematicBody2D" parent="."]
 
-[node name="platform_single" type="Sprite" parent="up_down"]
+[node name="TileMap" type="TileMap" parent="up_down"]
 position = Vector2( 0, 32 )
-texture = ExtResource( 2 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+tile_data = PoolIntArray( -131074, 0, 0, -131073, 1, 0, -196608, 1, 0, -196607, 2, 0, -65538, 9, 0, -65537, 10, 0, -131072, 10, 0, -131071, 11, 0, -2, 4, 0, -1, 5, 0, -65536, 5, 0, -65535, 6, 0 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="up_down"]
 position = Vector2( -64, -32 )
