@@ -31,3 +31,8 @@ func _on_Player_died():
 
 func _on_player_body_health_changed():
 	pass # Replace with function body.
+
+
+func _on_Timer_timeout():
+	
+	pass # Replace with function body.

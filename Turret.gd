@@ -33,7 +33,6 @@ func dead():
 	$Sprite.play("dead")
 
 	$TurretShape1.call_deferred("set_disabled", true)
-
 	
 	$Timer.start()
 	

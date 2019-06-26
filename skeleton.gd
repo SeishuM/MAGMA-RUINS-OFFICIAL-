@@ -1,4 +1,5 @@
 extends KinematicBody2D
+export var health = 5
 const GRAVITY = 10
 const SPEED = 75
 const FLOOR = Vector2(0, -1)
@@ -14,11 +15,13 @@ func is_dead():
 	return is_dead
 
 func dead():
-	is_dead = true
-	velocity = Vector2(0,0)
-	$skeleton_sprite.play("dead")
-	$skeleton_shape.set_disabled(true)
-	$skeleton_area/skeleton_area_shape.set_disabled(true)
+	health = health - 1
+	if health <= 0:
+		is_dead = true
+		velocity = Vector2(0,0)
+		$skeleton_sprite.play("dead")
+		$skeleton_shape.set_disabled(true)
+		$skeleton_area/skeleton_area_shape.set_disabled(true)
 	
 	$skeleton_death_timer.start()
 

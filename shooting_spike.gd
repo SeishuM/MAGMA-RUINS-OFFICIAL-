@@ -18,10 +18,7 @@ func _physics_process(delta):
 
 func _on_shooting_spike_area_body_entered(body):
 	if "Player" in body.name:
-		get_tree().reload_current_scene()
-		queue_free()
-	else:
-		queue_free()
-
-func _on_shooting_spike_notifier_screen_exited():
+		body.dead1()
 	queue_free()
+
+#func _on_shooting_spike_notifier_screen_exited():

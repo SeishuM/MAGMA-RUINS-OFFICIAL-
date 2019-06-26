@@ -7,19 +7,19 @@
 [ext_resource path="res://Sprites/Enemies/Skeleton/death/death04.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Enemies/Skeleton/death/death05.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Enemies/Skeleton/death/death06.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/Enemies/Skeleton/walk/walk01.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/Enemies/Skeleton/walk/walk02.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/Enemies/Skeleton/walk/walk03.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/Enemies/Skeleton/walk/walk04.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/Enemies/Skeleton/walk/walk05.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/Enemies/Skeleton/walk/walk06.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/Enemies/Skeleton/walk/walk07.png" type="Texture" id=14]
-[ext_resource path="res://Sprites/Enemies/Skeleton/walk/walk08.png" type="Texture" id=15]
-[ext_resource path="res://Sprites/Enemies/Skeleton/walk/walk09.png" type="Texture" id=16]
-[ext_resource path="res://Sprites/Enemies/Skeleton/shoot/shoot01.png" type="Texture" id=17]
-[ext_resource path="res://Sprites/Enemies/Skeleton/shoot/shoot02.png" type="Texture" id=18]
-[ext_resource path="res://Sprites/Enemies/Skeleton/shoot/shoot03.png" type="Texture" id=19]
-[ext_resource path="res://Sprites/Enemies/Skeleton/shoot/shoot04.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Enemies/Skeleton/shoot/shoot01.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Enemies/Skeleton/shoot/shoot02.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Enemies/Skeleton/shoot/shoot03.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Enemies/Skeleton/shoot/shoot04.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Enemies/Skeleton/walk/walk01.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Enemies/Skeleton/walk/walk02.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Enemies/Skeleton/walk/walk03.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Enemies/Skeleton/walk/walk04.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Enemies/Skeleton/walk/walk05.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Enemies/Skeleton/walk/walk06.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Enemies/Skeleton/walk/walk07.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Enemies/Skeleton/walk/walk08.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Enemies/Skeleton/walk/walk09.png" type="Texture" id=20]
 [ext_resource path="res://skeleton_area.gd" type="Script" id=21]
 
 [sub_resource type="SpriteFrames" id=1]
@@ -29,15 +29,15 @@ animations = [ {
 "name": "dead",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
-"loop": true,
-"name": "walk",
-"speed": 4.0
-}, {
-"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 19 ), ExtResource( 18 ), ExtResource( 17 ) ],
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 8 ) ],
 "loop": false,
 "name": "shoot",
 "speed": 12.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "walk",
+"speed": 4.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -57,7 +57,7 @@ position = Vector2( -23.3509, -32 )
 scale = Vector2( 0.75, 0.75 )
 frames = SubResource( 1 )
 animation = "walk"
-frame = 8
+frame = 5
 playing = true
 centered = false
 

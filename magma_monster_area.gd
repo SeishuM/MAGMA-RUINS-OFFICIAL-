@@ -5,9 +5,7 @@ func _ready():
 
 # enter code to lower health here
 func _on_magma_monster_area_body_entered(body):
-	if get_parent().is_dead() == false:
-		if "Player" in body.name:
-			# remove next line once health is implimented
-			get_tree().reload_current_scene()
-	else:
-		pass
+	if "Player" in body.name:
+		body.dead()
+	queue_free()
+	pass

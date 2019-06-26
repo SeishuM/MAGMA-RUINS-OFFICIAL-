@@ -1,6 +1,6 @@
 extends Area2D
 
-export var damage = 5
+
 
 var speed = 1000
 var velocity = Vector2()

@@ -34,13 +34,13 @@ var state = STATES.ALIVE
 
 	#emit_signal("health_changed", health)
 
-func _on_AnimationPlayer_animation_finished( name ):
-	if state != STATES.DEAD:
-		return
-	if name != "take_hit":
-		return
-
-	$AnimationPlayer.play("die")
+#func _on_AnimationPlayer_animation_finished( name ):
+#	if state != STATES.DEAD:
+#		return
+#	if name != "take_hit":
+#		return
+#
+#	$AnimationPlayer.play("die")
 
 
 func _physics_process(delta):
@@ -96,18 +96,43 @@ func _physics_process(delta):
 			for i in range(get_slide_count()):
 				if "Turret" in get_slide_collision(i).collider.name:
 					dead()
-
+		if get_slide_count() > 0:
+			for i in range(get_slide_count()):
+				if "skeleton" in get_slide_collision(i).collider.name:
+					dead1()
 	
 func dead():
-	max_health = max_health - 25
+	max_health = max_health - 20
 	emit_signal("health_changed", max_health)
-	
+
 	if max_health <= 0:
 		is_dead = true
 		motion = Vector2(0,0)
 		$player_sprite.play("dead")
-	#$CollisionShape2D.disabled = true
+		$Timer.start()
+
+func dead1():
+	max_health = max_health - 10
+	emit_signal("health_changed", max_health)
+	
+	if max_health <= -9:
+		is_dead = true
+		motion = Vector2(0,0)
+		$player_sprite.play("dead")
+		get_tree().change_scene("res://Level 1.tscn")
+
+func dead2():
+	max_health = max_health - 5
+	emit_signal("health_changed", max_health)
+
+	if max_health <= 0:
+		is_dead = true
+		motion = Vector2(0,0)
+		$player_sprite.play("dead")
 		$Timer.start()
 
 func _on_Timer_timeout():
 	get_tree().change_scene("Level 1.tscn")
+
+#func _on_Timer2_timeout():
+	
