@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://shooting_spike.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Effects/spike.png" type="Texture" id=2]
+[ext_resource path="res://Projectiles/spike.png" type="Texture" id=2]
+
 
 [node name="shooting_spike_area" type="Area2D"]
 position = Vector2( 0.35791, 0.263519 )

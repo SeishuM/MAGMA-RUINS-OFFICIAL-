@@ -21,8 +21,9 @@
 [ext_resource path="res://Characters/Player/land/land2.png" type="Texture" id=19]
 [ext_resource path="res://Characters/Player/jump/jumpdown00.png" type="Texture" id=20]
 [ext_resource path="res://Characters/Player/jump/jumpdown01.png" type="Texture" id=21]
-[ext_resource path="res://Characters/Player/Scenes/GUI.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Characters/Player/Health/Scenes/GUI.tscn" type="PackedScene" id=22]
 [ext_resource path="res://PauseScreen.tscn" type="PackedScene" id=23]
+
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
